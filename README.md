@@ -1,6 +1,6 @@
 ﻿# LFNet-light-field-saliency-net
 
-We release the Caffe code of [Light Field Saliency Detection with Deep Convolutional Networks](XXXX).
+We release the code of [Light Field Saliency Detection with Deep Convolutional Networks](XXXX), built on top of the  [DeepLab v2-Caffe codebase](https://bitbucket.org/aquariusjay/deeplab-public-ver2/src/master/).
 
 ## Reference
 
@@ -17,8 +17,11 @@ If you find our paper and repo useful, please cite our paper. Thanks!
 
 
 ## Installation
+
 [Python 2.7](https://www.anaconda.com/distribution/) 
+
 [Caffe](https://caffe.berkeleyvision.org/)
+
 [Matlab 2016b](https://www.mathworks.com/products/matlab.html). 
 Do the following two steps to make sure that the .m file can be used in Python
 - cd `matlabroot/extern/engines/python` 
@@ -39,7 +42,7 @@ Copy the label to the [val/annotations/](	/data/val/annotations/):
 `cp ./data/train/annotations/* ./data/val/annotations/`
 
 Copy the original images to the [val/JPGImages/](/data/val/JPGImages/):
-`cp ./Data/original_data/* ./data/val/JPGImages/`
+`cp ./data/original_data/* ./data/val/JPGImages/`
 
 Put the train data and test data in [data/train/](/data/train/).
 We use 5-fold cross-validation, the image index has been put into the .txt file according to 5-fold cross-validation.
@@ -84,3 +87,8 @@ Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art 
 2. J. Zhang, M. Wang, J. Gao, Y. Wang, X. Zhang, and X. Wu, “Saliency detection with a deeper investigation of light field,” in International Joint Conference on Artificial Intelligence, 2015.
 3. N. Li, B. Sun, and J. Yu, “A weighted sparse coding framework for saliency detection,” in IEEE Conference on Computer Vision and Pattern Recognition, 2015.
 4. L. Wang, H. Lu, X. Ruan, and M.-H. Yang, “Deep networks for saliency detection via local estimation and global search,” in IEEE Conference on Computer Vision and Pattern Recognition, 2015, pp. 3183–3192.
+
+
+### Acknowledgement
+
+Our light field saliency network is built on top of the  [DeepLab v2-Caffe](https://bitbucket.org/aquariusjay/deeplab-public-ver2/src/master/), but it could be extended to other network architectures. We thank Liang-Chieh Chen for releasing DeepLabv2-Caffe codebase.
