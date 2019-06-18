@@ -6,7 +6,7 @@ layer {
   python_param {
     module: "colorname_layers"
     layer: "ValDataLayer"
-    param_str: "{\'val_dir\': \'../LFNet/data/val\', \'seed\': 1337, \'split\': \'val1\', \'mean\': (88.386, 99.768, 107.622)}"
+    param_str: "{\'val_dir\': \'../data/val\', \'seed\': 1337, \'split\': \'val1\', \'mean\': (88.386, 99.768, 107.622)}"
   }
 }
 layer {
