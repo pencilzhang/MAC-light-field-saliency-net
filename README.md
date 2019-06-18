@@ -60,4 +60,4 @@ Run` LFNet/F_PR_MAE/salientmap.m` to get the final saliency map. The other .m fi
 
 ## Results:
 
-<div style="text-align:center"><img src ="https://github.com/emredog/FCNN-example/raw/master/plots/234_losses.png" /></div>
+<div style="text-align:center"><img src ="https://github.com/pencilzhang/LFNet-light-field-saliency-net/raw/master/result.png" /></div>
