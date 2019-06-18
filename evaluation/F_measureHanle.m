@@ -1,9 +1,9 @@
-function F_measureHanle
+function f_measureHanle
 
 clc
 clear
 
-salpath= '../LFNet_model/LFnet_99/result/1_result/salmap';
+salpath= '../models/LFnet_99/result/1_result/salmap';
 
 gtpath= '../data/original_GT';
 
