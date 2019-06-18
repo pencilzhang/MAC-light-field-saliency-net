@@ -26,7 +26,7 @@ def Aug1(dir,dir_GT,tempname,save_dir,save_GT):  ## geometric transformation
     #rotate.flip,crop
     c=eng.augment_geometry(dir,dir_GT,tempname,save_dir,save_GT)
     
-def Aug2(tempname,save_dir,save_GT):#Change brightness, chroma, contrast
+def Aug2(tempname,save_dir,save_GT):#brightness, chroma, contrast
     name=['','_90','_180','_crop1']
     for i in range(len(name)):
         imagename=tempname+name[i]+'.PNG'
