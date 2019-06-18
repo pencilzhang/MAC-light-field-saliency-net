@@ -62,7 +62,7 @@ Run` /F_PR_MAE/salientmap.m` to get the final saliency map. The other .m files i
 
 Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art methods on three datasets. (a) Central viewing/all-focus images. (b) Ground truth maps. (c) LFNet-9 × 9. (d) LFS [1]. (e) DILF [2]. (f) WSC [3]. (g) Multi-cue [4]. The first five samples are taken from the proposed Lytro Illum dataset, the middle three samples are taken from the HFUT-Lytro dataset, and the last two samples are taken from the LFSD dataset.
 
-<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/result1.png" /></div>
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/SaliencyMap.png" /></div>
 
 ## References
 1. N. Li, J. Ye, Y. Ji, H. Ling, and J. Yu, “Saliency detection on light field,” in IEEE Conference on Computer Vision and Pattern Recognition, 2014.
