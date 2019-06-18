@@ -2,18 +2,6 @@
 
 We release the code of [Light Field Saliency Detection with Deep Convolutional Networks](XXXX), built on top of the  [DeepLab v2-Caffe codebase](https://bitbucket.org/aquariusjay/deeplab-public-ver2/src/master/).
 
-## Reference
-
-If you find our paper and repo useful, please cite our paper. Thanks!
-
-```
-@article{Zhang2019lfnet,
-    title={Light Field Saliency Detection with Deep Convolutional Networks},
-    author={Zhang, Jun and Liu, Yamei and Zhang, Shengping, Poppe, Ronald and Wang, Meng},
-    journal={arXiv preprint arXiv:XXXX},
-    year={2019}
-}  
-```
 
 
 ## Installation
@@ -87,6 +75,18 @@ Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art 
 3. N. Li, B. Sun, and J. Yu, “A weighted sparse coding framework for saliency detection,” in IEEE Conference on Computer Vision and Pattern Recognition, 2015.
 4. L. Wang, H. Lu, X. Ruan, and M.-H. Yang, “Deep networks for saliency detection via local estimation and global search,” in IEEE Conference on Computer Vision and Pattern Recognition, 2015, pp. 3183–3192.
 
+## Citation
+
+If you find our paper and repo useful, please cite our paper. Thanks!
+
+```
+@article{Zhang2019lfnet,
+    title={Light Field Saliency Detection with Deep Convolutional Networks},
+    author={Zhang, Jun and Liu, Yamei and Zhang, Shengping, Poppe, Ronald and Wang, Meng},
+    journal={arXiv preprint arXiv:XXXX},
+    year={2019}
+}  
+```
 
 ## Acknowledgement
 
