@@ -30,18 +30,18 @@ Note: matlabroot is the root directory of MATLAB in your system
 ## Data
 There are 640 original images in [data/original_data](/data/original_data), and the corresponding ground-truths are in [data/original_gt](/data/original_gt).
 
-Run python `augment.py` for data enhancement
+Run python `augment.py` for data augmentation.
 
 Convert GT to the label that can be entered into the Caffe network by running:
 `./convert_labels.py ./data/train/GT_aug/ ./data/train/name.txt ./data/train/annotations/`
 
-Copy the label to the [val/annotations/](	/val/annotations/):
+Copy the label to the [val/annotations/](	/data/val/annotations/):
 `cp ./data/train/annotations/* ./data/val/annotations/`
 
-Copy the original images to the [val/JPGImages/](	/val/JPGImages/):
+Copy the original images to the [val/JPGImages/](/data/val/JPGImages/):
 `cp ./Data/original_data/* ./data/val/JPGImages/`
 
-Put the train data and test data in [data/train/](	/data/train/).
+Put the train data and test data in [data/train/](/data/train/).
 We use 5-fold cross-validation, the image index has been put into the .txt file according to 5-fold cross-validation.
 For example, train1.txt indicates the train data used in the 1st-fold experiment. 
 The corresponding val1.txt represents the test data used in the 1st-fold experiment.
