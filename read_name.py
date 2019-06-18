@@ -23,8 +23,8 @@ def ListFilesToTxt(dir,file,wildcard,recursion):
                     file.write(name + "\n")
                     break 
 def Test():
-  dir="/home/dhubel/deeplab_v2/LFNet/data/train/JPGImages"
-  outfile="/home/dhubel/deeplab_v2/LFNet/data/train/name.txt"
+  dir="/home/dhubel/deeplab_v2/LFNet/data/train/JPGImages"  # replace your path
+  outfile="/home/dhubel/deeplab_v2/LFNet/data/train/name.txt"   # replace your path
   wildcard = ".PNG"
   file = open(outfile,"w")
   if not file:

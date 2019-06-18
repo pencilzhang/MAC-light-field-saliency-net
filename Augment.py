@@ -11,7 +11,7 @@ from PIL import Image
 from PIL import ImageEnhance
 import os
 
-os.chdir('/home/dhubel/deeplab_v2/LFNet/')
+os.chdir('/home/dhubel/deeplab_v2/LFNet/')  #repalce your path to Augment.py
 import matlab.engine
 eng=matlab.engine.start_matlab()
 

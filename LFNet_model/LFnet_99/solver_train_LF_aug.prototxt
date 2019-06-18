@@ -1,0 +1,20 @@
+train_net: "../LFNet_model/LFnet_99/train_LF.prototxt"
+test_net: "../LFNet_model/LFnet_99/val_LF.prototxt"
+test_iter: 128 
+test_interval: 500   
+
+lr_policy: "poly"
+power: 0.9
+base_lr: 0.001
+
+average_loss: 20
+display: 20
+max_iter: 160000
+momentum: 0.9
+
+weight_decay: 0.0005
+regularization_type:"L2"
+
+snapshot: 20000
+snapshot_prefix: "../LFNet_model/LFnet_99/model/1train"
+solver_mode: GPU
