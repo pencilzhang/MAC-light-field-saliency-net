@@ -59,8 +59,8 @@ if record_val_loss:
    f.close()
    w.close()
 else:
-   f=open('../LFNet/LFNet_model/'+LFNet_model+'/solver_train_LF.prototxt','r+')
-   w=open('../LFNet/LFNet_model/'+LFNet_model+'/solver_train_LF_aug.prototxt','w+')
+   f=open('../LFNet_model/'+LFNet_model+'/solver_train_LF.prototxt','r+')
+   w=open('../LFNet_model/'+LFNet_model+'/solver_train_LF_aug.prototxt','w+')
    s=f.read()
    f.seek(0,0)    
    if '#test_'not in s and 'test_' in s:
@@ -73,8 +73,8 @@ else:
 
    
    
-caffemodel='../LFNet/Pretraining_model/train_iter_20000.caffemodel'
-solver=caffe.SGDSolver('../LFNet/LFNet_model/'+LFNet_model+'/solver_train_LF_aug.prototxt')
+caffemodel='../Pretraining_model/train_iter_20000.caffemodel'
+solver=caffe.SGDSolver('../LFNet_model/'+LFNet_model+'/solver_train_LF_aug.prototxt')
 solver.net.copy_from(caffemodel)
 #solver.test_nets[0].copy_from(caffemodel)
 
@@ -86,7 +86,7 @@ if not record_val_loss:
           
     solver.step(max_iter)
 else:
-    loss_PATH='../LFNet/LFNet_model/'+LFNet_model+'/loss/'
+    loss_PATH='../LFNet_model/'+LFNet_model+'/loss/'
 
     train_loss = []
     val_loss = []
