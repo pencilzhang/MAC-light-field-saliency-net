@@ -24,8 +24,8 @@ caffe.set_device(0)
 caffe.set_mode_gpu()
 
 
-caffemodel_m='../LFNet/LFNet_model/LFnet_99/model/train_iter_160000.caffemodel'
-net_test = caffe.Net('../LFNet/LFNet_model/LFnet_99/train_LF.prototxt',  
+caffemodel_m='../LFNet_model/LFnet_99/model/train_iter_160000.caffemodel'
+net_test = caffe.Net('../LFNet_model/LFnet_99/train_LF.prototxt',  
                 caffemodel_m,  
                 caffe.TEST) 
 
