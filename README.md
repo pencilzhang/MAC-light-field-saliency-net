@@ -49,16 +49,15 @@ We use 5-fold cross-validation, the image index has been put into the .txt file 
 For example, train1.txt indicates the train data used in the 1st-fold experiment. 
 The corresponding val1.txt represents the test data used in the 1st-fold experiment.
 
-## Training
-First find colorname_layers.py in `deeplab-public-ver2/`
+## Train
+First go to `deeplab-public-ver2/colorname_layers.py`, then
+replace the caffe_root with your caffe path in your system. 
 
-Replace the caffe_root with your caffe path in your system. There are two ways to do that:
-
+There are two ways to train the network:
 * Method 1):
 
 Run `train.py` to train the LFnet_9×9 network.
 If you need to train other models, you can replace 	`LFnet_99` with `LFnet_33` or `LFnet_StarShaped`
-
 k indicates the first fold cross validation, which can be changed into 1-5.
 
 * Method 2):
