@@ -10,7 +10,7 @@ We release the code of [Light Field Saliency Detection with Deep Convolutional N
 
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/LFNet.png" /></div>
 
-  (a) LFNet-99. (b) LFNet-33. (c) LFnet_StarShaped. The selected viewpoints are highlighted in red.
+  (a) LFNet-9 × 9. (b) LFNet-3 × 3. (c) LFnet_StarShaped. The selected viewpoints are highlighted in red.
 
 ## Installation
 
