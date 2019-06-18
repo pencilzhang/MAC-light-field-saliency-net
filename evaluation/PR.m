@@ -1,4 +1,4 @@
-function [precision,recall]=PR(salpath,gtpath)
+function [precision,recall]=pr(salpath,gtpath)
 
 % 
 % salpath= '../LFNet_model/LFnet_99/result/1_result/salmap';
