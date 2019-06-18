@@ -1,4 +1,5 @@
-# Installation:
+# LFNet-light-field-saliency-net
+## Installation:
 Install Python2 and Make caffe with python2 wrapper. Detailed description can refer to these two URLs：https://blog.csdn.net/ruotianxia/article/details/78331964 and https://github.com/BVLC/caffe
 
 Then install MATLAB2016b, Do the following to make sure that the .m file can be used in Python
@@ -9,7 +10,7 @@ Then install MATLAB2016b, Do the following to make sure that the .m file can be 
 
 Note: matlabroot is the root directory of MATLAB in your system
 
-# Data:
+## Data:
 There are 640 original images in /LFNet/Data/original_data, and the corresponding GT is in /LFNet/Data/original_GT.
 
 Run Python Augment.py for data enhancement under the ./LFNet path
@@ -30,12 +31,12 @@ for example, train1.txt indicates the train data used in the first experiment in
 
 The corresponding val1.txt represents the test data used in the first experiment in the 5-fold cross-validation.
 
-# training:
+## training:
 First find colorname_layers.py in /LFNetCode/deeplab-public-ver2/
 
 Replace the caffe_root with your caffe path in your system
 
-* method one:
+* Method 1:
 
 Run `train.py` to train.
 
@@ -51,8 +52,12 @@ Open the terminal, switch to the caffe root directory,
 
 run:`/LFNet/LFNet_model/LFnet_99/train_LF_net.sh`, and note that the file path in train_LF_net.sh is changed to the path of your system.
 
-# test:
+## test:
 
 Run `test.py` in` /LFNet` to test and save the test results as a .mat file.
 
 Run` LFNet/F_PR_MAE/salientmap.m` to get the final saliency map. The other .m files in LFNet/F_PR_MAE are used to calculate quantitative indicators F, WF, MAE, AP and PR.
+
+## Results:
+
+<div style="text-align:center"><img src ="https://github.com/emredog/FCNN-example/raw/master/plots/234_losses.png" /></div>
