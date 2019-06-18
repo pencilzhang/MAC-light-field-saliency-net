@@ -1,5 +1,5 @@
 function  salientmap
-maindir='../LFNet_model/LFnet_99/result/1_result/pro';
+maindir='../models/LFnet_99/result/1_result/pro';
 subdirpath = fullfile( maindir, '*.mat' );
 dat = dir( subdirpath );               
 for j = 1:length( dat )
@@ -14,7 +14,7 @@ for j = 1:length( dat )
     map=uint8(TB*255);
     c=strfind(tempFileName,'_blob');
     name=tempFileName(1:c-1);
-    imwrite(map,['../LFNet_model/LFnet_99/result/1_result/salmap/',name,'.png']);
+    imwrite(map,['../models/LFnet_99/result/1_result/salmap/',name,'.png']);
     display(num2str(j));
         
 end
