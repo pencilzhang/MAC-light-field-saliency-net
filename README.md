@@ -89,6 +89,7 @@ Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art 
 4. L. Wang, H. Lu, X. Ruan, and M.-H. Yang, “Deep networks for saliency detection via local estimation and global search,” in IEEE Conference on Computer Vision and Pattern Recognition, 2015, pp. 3183–3192.
 
 
-### Acknowledgement
+
+###Acknowledgement
 
 Our light field saliency network is built on top of the  [DeepLab v2-Caffe](https://bitbucket.org/aquariusjay/deeplab-public-ver2/src/master/), but it could be extended to other network architectures. We thank Liang-Chieh Chen for releasing DeepLabv2-Caffe codebase.
