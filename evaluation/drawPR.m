@@ -3,10 +3,10 @@
 clear all;%close all;
 dataset = 'illum'; % name of the dataset
 
-methods = {'LFS','ijcai15','WSC','tomm17','LFnet_99'}; % you can add more names of methods separated by comma
+%methods = {'LFS','ijcai15','WSC','tomm17','LFnet_99'}; % you can add more names of methods separated by comma
 methods = {'LFnet_99'};
 methods_colors = distinguishable_colors(length(methods));
-readpath = '../PR_Curve/'; 
+readpath = '../pr_curve/'; 
 
 %% load PRCurve.txt and draw PR curves
 figure
