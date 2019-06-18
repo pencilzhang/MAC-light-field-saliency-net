@@ -2,7 +2,15 @@
 
 We release the code of [Light Field Saliency Detection with Deep Convolutional Networks](XXXX), built on top of the  [DeepLab v2-Caffe codebase](https://bitbucket.org/aquariusjay/deeplab-public-ver2/src/master/).
 
+## Overall network
 
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/framework.png" /></div>
+
+## Architectures of three proposed LFNet. 
+
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/LFNet.png" /></div>
+
+  (a) LFNet-99. (b) LFNet-33. (c) LFnet_StarShaped. The selected viewpoints are highlighted in red.
 
 ## Installation
 
@@ -66,7 +74,7 @@ Run `/evaluation/salientmap.m` to get the final saliency map. The other `.m` fil
 
 Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art methods on three datasets. (a) Central viewing/all-focus images. (b) Ground truth maps. (c) LFNet-9 × 9. (d) LFS [1]. (e) DILF [2]. (f) WSC [3]. (g) Multi-cue [4]. The first five samples are taken from the proposed Lytro Illum dataset, the middle three samples are taken from the HFUT-Lytro dataset, and the last two samples are taken from the LFSD dataset.
 
-<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/SaliencyMap.png" /></div>
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/result.png" /></div>
 
 
 ## References
