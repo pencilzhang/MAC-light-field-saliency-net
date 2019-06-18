@@ -16,7 +16,7 @@ import matlab.engine
 eng=matlab.engine.start_matlab()
 
    
-def Aug1(dir,dir_GT,tempname,save_dir,save_GT):  ## geometric transformation
+def Aug_geometric(dir,dir_GT,tempname,save_dir,save_GT):  ## geometric transformation
     fullname=os.path.join(dir,tempname+'.PNG')
     fullname_GT=os.path.join(dir_GT,tempname+'.PNG')
     image = Image.open(fullname)
@@ -26,7 +26,7 @@ def Aug1(dir,dir_GT,tempname,save_dir,save_GT):  ## geometric transformation
     #rotate.flip,crop
     c=eng.augment_geometry(dir,dir_GT,tempname,save_dir,save_GT)
     
-def Aug2(tempname,save_dir,save_GT):#Change brightness, chroma, contrast
+def Aug_color(tempname,save_dir,save_GT):#Change brightness, chroma, contrast
     name=['','_90','_180','_crop1']
     for i in range(len(name)):
         imagename=tempname+name[i]+'.PNG'
@@ -61,7 +61,7 @@ def Aug2(tempname,save_dir,save_GT):#Change brightness, chroma, contrast
         image_contrasted.save(save_dir+'/'+tempname+name[i]+'_cont.PNG')
         GT.save(save_GT+'/'+tempname+name[i]+'_cont.PNG')
         
-def Aug3(save_dir,save_GT):##add noise
+def Aug_addnoise(save_dir,save_GT):##add noise
     c=eng.augment_addnoise(save_dir,save_GT)
     print 'completed!!!'    
 
@@ -73,11 +73,11 @@ def Augment(dir_image,dir_GT,save_dir,save_GT):
     for name in files:
         index=name.rfind('.')
         tempname=name[:index]
-        Aug1(dir_image,dir_GT,tempname,save_dir,save_GT)
-        Aug2(tempname,save_dir,save_GT)
+        Aug_geometric(dir_image,dir_GT,tempname,save_dir,save_GT)
+        Aug_color(tempname,save_dir,save_GT)
         print 'already operated '+str(j)
     print 'start adding noise....'
-    Aug3(save_dir,save_GT)
+    Aug_addnoise(save_dir,save_GT)
     
 dir_image='./data/original_data/'
 dir_GT='./data/original_GT/'
