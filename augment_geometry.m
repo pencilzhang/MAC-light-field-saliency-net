@@ -1,4 +1,4 @@
-function c=augment1(dir,dir_GT,tempname,save_path,GTsave_path)
+function c=augment_geometry(dir,dir_GT,tempname,save_path,GTsave_path)
 image=imread([dir,tempname,'.PNG']);
 GT=imread([dir_GT,tempname,'.PNG']);
 

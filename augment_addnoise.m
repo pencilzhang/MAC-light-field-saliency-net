@@ -1,4 +1,4 @@
-function c=augment2(save_dir,save_GT)
+function c=augment_addnoise(save_dir,save_GT)
 
 Im_path = fullfile( save_dir,'*.PNG' );
 Im_dat = dir( Im_path );

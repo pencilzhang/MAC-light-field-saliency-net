@@ -11,12 +11,12 @@ from PIL import Image
 from PIL import ImageEnhance
 import os
 
-os.chdir('/home/dhubel/deeplab_v2/LFNet/')  #repalce your path to Augment.py
+os.chdir('/home/dhubel/deeplab_v2/LFNet/')
 import matlab.engine
 eng=matlab.engine.start_matlab()
 
    
-def Aug1(dir,dir_GT,tempname,save_dir,save_GT):
+def Aug1(dir,dir_GT,tempname,save_dir,save_GT):  ## geometric transformation
     fullname=os.path.join(dir,tempname+'.PNG')
     fullname_GT=os.path.join(dir_GT,tempname+'.PNG')
     image = Image.open(fullname)
@@ -24,9 +24,9 @@ def Aug1(dir,dir_GT,tempname,save_dir,save_GT):
     image.save(save_dir+'/'+tempname+'.PNG')
     GT.save(save_GT+'/'+tempname+'.PNG')
     #rotate.flip,crop
-    c=eng.augment1(dir,dir_GT,tempname,save_dir,save_GT)
+    c=eng.augment_geometry(dir,dir_GT,tempname,save_dir,save_GT)
     
-def Aug2(tempname,save_dir,save_GT):
+def Aug2(tempname,save_dir,save_GT):#Change brightness, chroma, contrast
     name=['','_90','_180','_crop1']
     for i in range(len(name)):
         imagename=tempname+name[i]+'.PNG'
@@ -61,8 +61,8 @@ def Aug2(tempname,save_dir,save_GT):
         image_contrasted.save(save_dir+'/'+tempname+name[i]+'_cont.PNG')
         GT.save(save_GT+'/'+tempname+name[i]+'_cont.PNG')
         
-def Aug3(save_dir,save_GT):
-    c=eng.augment2(save_dir,save_GT)
+def Aug3(save_dir,save_GT):##add noise
+    c=eng.augment_addnoise(save_dir,save_GT)
     print 'completed!!!'    
 
 def Augment(dir_image,dir_GT,save_dir,save_GT):
