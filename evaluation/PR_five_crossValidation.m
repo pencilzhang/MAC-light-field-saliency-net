@@ -1,6 +1,6 @@
 %% A demo code to display precision-recall curve for evaluating salient object detection algorithms
 %%  five-cross validation 
-function PR_five_crossValidation
+function pr_five_crossvalidation
 
 method = 'LFnet_99';
 dataset = 'illum'; % name of the dataset
@@ -13,11 +13,11 @@ r=zeros(256,1);
 figure
 hold on
 for m = 1:length(methods)
-    salpath= ['../LFNet_model/',method,'/result/',methods{m},'/salmap'];
+    salpath= ['../models/',method,'/result/',methods{m},'/salmap'];
     gtpath= '../data/original_GT';%% set your own GT path
     
     
-    [precision,recall]=PR(salpath,gtpath);
+    [precision,recall]=pr(salpath,gtpath);
     P = P +precision;
     r=r+recall;
  
