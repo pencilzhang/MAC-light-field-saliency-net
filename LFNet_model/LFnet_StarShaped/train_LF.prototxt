@@ -6,7 +6,7 @@ layer {
   python_param {
     module: "colorname_layers"
     layer: "TrainDataLayer"
-    param_str: "{\'train_dir\': \'../LFNet/data/train\', \'seed\': 1337, \'split\': \'train1\', \'mean\': (88.386, 99.768, 107.622)}"
+    param_str: "{\'train_dir\': \'../data/train\', \'seed\': 1337, \'split\': \'train1\', \'mean\': (88.386, 99.768, 107.622)}"
   }
 }
 layer {
