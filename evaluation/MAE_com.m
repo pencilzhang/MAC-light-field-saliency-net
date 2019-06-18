@@ -1,7 +1,7 @@
-function MAE_com
+function mae_com
 clear all
 close all;clc;
-salpath= '../LFNet_model/LFnet_99/result/1_result/salmap';
+salpath= '../models/LFnet_99/result/1_result/salmap';
 
 gtpath= '../data/original_GT';
 
