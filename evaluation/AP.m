@@ -1,8 +1,8 @@
-function AP
+function ap
 clc
 clear
 
-salpath= '../LFNet_model/LFnet_99/result/1_result/salmap';
+salpath= '../models/LFnet_99/result/1_result/salmap';
 
 gtpath= '../data/original_GT';
 
