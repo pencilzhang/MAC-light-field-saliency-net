@@ -6,7 +6,7 @@ layer {
   python_param {
     module: "colorname_layers"
     layer: "ValDataLayer"
-    param_str: "{\'val_dir\': \'../LFNet/data/val\', \'seed\': 1337, \'split\': \'val1\', \'mean\': (88.386, 99.768, 107.622)}"
+    param_str: "{\'val_dir\': \'../data/val\', \'seed\': 1337, \'split\': \'val1\', \'mean\': (88.386, 99.768, 107.622)}"
   }
 }
 layer {
@@ -1312,8 +1312,8 @@ layer {
     phase: TEST
   }
   mat_write_param {
-    prefix: "../LFNet/LFNet_model/LFnet_StarShaped/result/1_result/pro/"
-    source: "../LFNet/data/val/val1.txt"
+    prefix: "../LFNet_model/LFnet_StarShaped/result/1_result/pro/"
+    source: "../data/val/val1.txt"
     strip: 0
     period: 1
   }
