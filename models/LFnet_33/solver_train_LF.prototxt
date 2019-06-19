@@ -1,5 +1,5 @@
-train_net: "../LFNet_model/LFnet_33/train_LF.prototxt"
-test_net: "../LFNet_model/LFnet_33/val_LF.prototxt"
+train_net: "../models/LFnet_33/train_LF.prototxt"
+test_net: "../models/LFnet_33/val_LF.prototxt"
 
 test_iter: 128 
 test_interval: 500 
@@ -17,6 +17,6 @@ weight_decay: 0.0005
 regularization_type:"L2"
 
 snapshot: 20000
-snapshot_prefix: "../LFNet_model/LFnet_33/model/1train"
+snapshot_prefix: "../models/LFnet_33/model/1train"
 solver_mode: GPU
 

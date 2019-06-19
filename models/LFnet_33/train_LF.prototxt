@@ -1160,13 +1160,4 @@ layer {
     ignore_label: 255
   }
 }
-layer {
-  name: "accuracy"
-  type: "SegAccuracy"
-  bottom: "socre"
-  bottom: "label"
-  top: "accuracy"
-  seg_accuracy_param {
-    ignore_label: 255
-  }
-}
+

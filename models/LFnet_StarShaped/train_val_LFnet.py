@@ -151,15 +151,15 @@ def cn_LF(split):
 #    
     n.loss = L.SoftmaxWithLoss(n.socre, n.label, loss_param=dict(ignore_label=255))
    
-    n.accuracy=L.SegAccuracy(n.socre, n.label, seg_accuracy_param=dict(ignore_label=255))
+   
     
     return n.to_proto()
 
 def make_net():
-    with open('../LFNet_model/LFnet_StarShaped/train_LF.prototxt', 'w') as f:
+    with open('../models/LFnet_StarShaped/train_LF.prototxt', 'w') as f:
         f.write(str(cn_LF('train')))
 
-    with open('../LFNet_model/LFnet_StarShaped/val_LF.prototxt', 'w') as f:
+    with open('../models/LFnet_StarShaped/val_LF.prototxt', 'w') as f:
         f.write(str(cn_LF('val')))
 
 if __name__ == '__main__':
