@@ -6,7 +6,7 @@ We release the code of [Light Field Saliency Detection with Deep Convolutional N
 
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/framework.png" /></div>
 
-## Architectures of three proposed LFNet. 
+## Architectures of three proposed LFNet variants. 
 
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/LFNet.png" /></div>
 
