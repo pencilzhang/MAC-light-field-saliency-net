@@ -62,6 +62,9 @@ Open the terminal, switch to the caffe root directory,
 run:`/LFNet_model/LFnet_99/train_LF_net.sh`. 
 Note that the file path is changed to the path of your system.
 
+* Pretrained models
+
+To get the pretrained models, please download Pretrained models on XXXX, and put the file in folder pretrain
 
 ## Test
 
