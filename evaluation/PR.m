@@ -1,7 +1,7 @@
 function [precision,recall]=pr(salpath,gtpath)
 
 % 
-% salpath= '../result/result_99/1fold_result/salmap';
+%  salpath= ['../result/',LFNet_model,'/',num2str(k),'fold_result/salmap'];
 % % 
 % gtpath= '../data/original_GT';
 
