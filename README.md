@@ -46,15 +46,14 @@ For example, train1.txt indicates the train data used in the 1st-fold experiment
 The corresponding val1.txt represents the test data used in the 1st-fold experiment.
 
 ## Train
-First go to `deeplab-public-ver2/colorname_layers.py`, then
+* First go to `deeplab-public-ver2/colorname_layers.py`, then
 replace the caffe_root with your caffe path in your system. 
 
-There are two ways to train the network:
-* 1) Run `train.py` to train the LFnet_9×9 network.
+* There are two ways to train the network:
+(1) Run `train.py` to train the LFnet_9×9 network.
 If you need to train other models, you can replace 	`LFnet_99` with `LFnet_33` or `LFnet_StarShaped`
 k indicates the first fold cross validation, which can be changed into 1-5.
-
-* 2) Open the terminal, switch to the caffe root directory, 
+(2) Open the terminal, switch to the caffe root directory, 
 run:`/LFNet_model/LFnet_99/train_LF_net.sh`. 
 Note that the file path is changed to the path of your system.
 
