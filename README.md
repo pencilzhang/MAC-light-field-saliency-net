@@ -82,6 +82,10 @@ Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art 
 3. N. Li, B. Sun, and J. Yu, “A weighted sparse coding framework for saliency detection,” in IEEE Conference on Computer Vision and Pattern Recognition, 2015.
 4. J. Zhang, M. Wang, L. Lin, X. Yang, J. Gao, and Y. Rui, “Saliency detection on light field: A multi-cue approach,” ACM Transactions on Multimedia Computing, Communications, and Applications, 2017.
 
+## TODO
+-   TODO: Pretrained models release
+-   TODO: Dataset release
+
 ## Citation
 
 If you find our paper and repo useful, please cite our paper. Thanks!
@@ -98,3 +102,10 @@ If you find our paper and repo useful, please cite our paper. Thanks!
 ## Acknowledgement
 
 Our light field saliency network is built on top of the  [DeepLab v2-Caffe](https://bitbucket.org/aquariusjay/deeplab-public-ver2/src/master/), but it could be extended to other network architectures. We thank Liang-Chieh Chen for releasing DeepLabv2-Caffe codebase.
+
+
+## Contact
+
+[Jun Zhang](mailto:zhangjun1126@gmail.com),  [Yamei Liu](mailto:liuarmg@gmail.com)
+
+Questions can also be left as issues in the repository. We will be happy to answer them.
