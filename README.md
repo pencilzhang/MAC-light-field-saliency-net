@@ -50,21 +50,17 @@ First go to `deeplab-public-ver2/colorname_layers.py`, then
 replace the caffe_root with your caffe path in your system. 
 
 There are two ways to train the network:
-* Method 1):
-
-Run `train.py` to train the LFnet_9×9 network.
+* 1) Run `train.py` to train the LFnet_9×9 network.
 If you need to train other models, you can replace 	`LFnet_99` with `LFnet_33` or `LFnet_StarShaped`
 k indicates the first fold cross validation, which can be changed into 1-5.
 
-* Method 2):
-
-Open the terminal, switch to the caffe root directory, 
+* 2) Open the terminal, switch to the caffe root directory, 
 run:`/LFNet_model/LFnet_99/train_LF_net.sh`. 
 Note that the file path is changed to the path of your system.
 
 * Pretrained models
 
-To get the pretrained models, please download pretrained models on XXXX, and put the file in folder pretrain
+To get the pretrained models, please download pretrained models on XXXXXXXX, and put the file in folder [pretrain](/pretrain)
 
 ## Test
 
@@ -94,7 +90,7 @@ If you find our paper and repo useful, please cite our paper. Thanks!
 @article{Zhang2019lfnet,
     title={Light Field Saliency Detection with Deep Convolutional Networks},
     author={Zhang, Jun and Liu, Yamei and Zhang, Shengping, Poppe, Ronald and Wang, Meng},
-    journal={arXiv preprint arXiv:XXXX},
+    journal={arXiv preprint arXiv: 2737364},
     year={2019}
 }  
 ```
