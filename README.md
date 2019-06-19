@@ -58,7 +58,6 @@ run:`/LFNet_model/LFnet_99/train_LF_net.sh`.
 Note that the file path is changed to the path of your system.
 
 * Pretrained models
-
 To get the pretrained models, please download pretrained models on XXXXXXXX, and put the file in  [pretrain](/pretrain) folder.
 
 ## Test
