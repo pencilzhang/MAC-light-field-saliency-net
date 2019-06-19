@@ -73,7 +73,7 @@ else:
 
    
    
-caffemodel='../Pretraining_model/train_iter_20000.caffemodel'
+caffemodel='../pretrain/train_iter_20000.caffemodel'
 solver=caffe.SGDSolver('../LFNet_model/'+LFNet_model+'/solver_train_LF_aug.prototxt')
 solver.net.copy_from(caffemodel)
 #solver.test_nets[0].copy_from(caffemodel)
