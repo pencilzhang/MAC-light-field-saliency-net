@@ -19,11 +19,11 @@ We release the code of [Light Field Saliency Detection with Deep Convolutional N
 [Caffe](https://caffe.berkeleyvision.org/)
 
 [Matlab 2016b](https://www.mathworks.com/products/matlab.html). 
-Do the following two steps to make sure that the .m file can be used in Python
+Do the following two steps to make sure that the .m file can be used in Python:
 - cd `matlabroot/extern/engines/python` 
 - python `setup.py` install
 
-Note: matlabroot is the root directory of MATLAB in your system
+Note: matlabroot is the root directory of MATLAB in your system.
 
 
 ## Data
@@ -60,7 +60,7 @@ Note that the file path is changed to the path of your system.
 
 * Pretrained models
 
-To get the pretrained models, please download pretrained models on XXXXXXXX, and put the file in folder [pretrain](/pretrain)
+To get the pretrained models, please download pretrained models on XXXXXXXX, and put the file in  [pretrain](/pretrain) folder.
 
 ## Test
 
