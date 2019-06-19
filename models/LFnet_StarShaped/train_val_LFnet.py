@@ -151,7 +151,7 @@ def cn_LF(split):
 #    
     n.loss = L.SoftmaxWithLoss(n.socre, n.label, loss_param=dict(ignore_label=255))
    
-    n.accuracy=L.SegAccuracy(n.socre, n.label, seg_accuracy_param=dict(ignore_label=255))
+   
     
     return n.to_proto()
 
