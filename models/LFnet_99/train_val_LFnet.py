@@ -144,10 +144,10 @@ def cn_LF(split):
     return n.to_proto()
 
 def make_net():
-    with open('../LFNet_model/LFnet_99/train_LF.prototxt', 'w') as f:
+    with open('../models/LFnet_99/train_LF.prototxt', 'w') as f:
         f.write(str(cn_LF('train')))
 
-    with open('../LFNet_model/LFnet_99/val_LF.prototxt', 'w') as f:
+    with open('../models/LFnet_99/val_LF.prototxt', 'w') as f:
         f.write(str(cn_LF('val')))
 
 if __name__ == '__main__':

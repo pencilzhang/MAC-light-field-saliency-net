@@ -6,7 +6,7 @@ clear
 methods = {'train_loss','val_loss'}; 
 
 methods_colors = distinguishable_colors(length(methods));
-readpath = '../LFNet_model/LFnet_99/loss'; 
+readpath = '../models/LFnet_99/loss'; 
 
 figure
 hold on

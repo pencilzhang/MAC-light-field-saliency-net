@@ -23,7 +23,7 @@ k=1
 record_val_loss=True
 
 
-f=open('../LFNet_model/'+LFNet_model+'/train_LF.prototxt','r+')
+f=open('../models/'+LFNet_model+'/train_LF.prototxt','r+')
 s=f.read()
 f.seek(0,0)
 index=s.rfind('split')
@@ -33,7 +33,7 @@ f.write(s.replace(s[index+11:index+index1-2],'train'+str(k)))
 f.close()
 
 if record_val_loss:
-   f=open('../LFNet_model/'+LFNet_model+'/val_LF.prototxt','r+')
+   f=open('../models/'+LFNet_model+'/val_LF.prototxt','r+')
    s=f.read()
    f.seek(0,0)
    index=s.rfind('split')
@@ -42,8 +42,8 @@ if record_val_loss:
    f.write(s.replace(s[index+11:index+index1-2],'val'+str(k)))
    f.close() 
    
-   f=open('../LFNet_model/'+LFNet_model+'/solver_train_LF.prototxt','r+')
-   w=open('../LFNet_model/'+LFNet_model+'/solver_train_LF_aug.prototxt','w+')
+   f=open('../models/'+LFNet_model+'/solver_train_LF.prototxt','r+')
+   w=open('../models/'+LFNet_model+'/solver_train_LF_aug.prototxt','w+')
    s=f.read()
    f.seek(0,0) 
    if 'test_' not in s:
@@ -59,8 +59,8 @@ if record_val_loss:
    f.close()
    w.close()
 else:
-   f=open('../LFNet_model/'+LFNet_model+'/solver_train_LF.prototxt','r+')
-   w=open('../LFNet_model/'+LFNet_model+'/solver_train_LF_aug.prototxt','w+')
+   f=open('../models/'+LFNet_model+'/solver_train_LF.prototxt','r+')
+   w=open('../models/'+LFNet_model+'/solver_train_LF_aug.prototxt','w+')
    s=f.read()
    f.seek(0,0)    
    if '#test_'not in s and 'test_' in s:
@@ -73,7 +73,7 @@ else:
 
    
    
-caffemodel='../Pretraining_model/train_iter_20000.caffemodel'
+caffemodel='../pretrain/pretrain.caffemodel'
 solver=caffe.SGDSolver('../LFNet_model/'+LFNet_model+'/solver_train_LF_aug.prototxt')
 solver.net.copy_from(caffemodel)
 #solver.test_nets[0].copy_from(caffemodel)
