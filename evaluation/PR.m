@@ -1,9 +1,9 @@
 function [precision,recall]=pr(salpath,gtpath)
 
 % 
-% salpath= '../LFNet_model/LFnet_99/result/1_result/salmap';
+% salpath= '../result/result_99/1fold_result/salmap';
 % % 
-% gtpath= '/media/dhubel/24c82cc9-d084-41b1-8f8c-ed0d81eb1acb/allresult/GT/illum/GT';
+% gtpath= '../data/original_GT';
 
 
 
