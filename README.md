@@ -27,7 +27,7 @@ Note: matlabroot is the root directory of MATLAB in your system
 
 
 ## Data
-There are 640 original images in [data/original_data](/data/original_data), and the corresponding ground-truths are in [data/original_gt](/data/original_gt).
+There are 640 original images in [data/original_data](/data/original_data), and the corresponding ground-truths are in [data/original_GT](/data/original_GT).
 
 Run python `augment.py` for data augmentation.
 
