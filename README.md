@@ -5,12 +5,12 @@ We release the code of [Light Field Saliency Detection with Deep Convolutional N
 ## Overall network
 
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/framework.png" /></div>
-<font size=3> The proposed network architecture.
+<font size=2> The proposed network architecture.
 
 ## Architectures of three proposed LFNet variants 
 
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/LFNet.png" /></div>
-<font size=3> The architectures of LFNet variants.  (a) LFNet-9 × 9. (b) LFNet-3 × 3. (c) LFnet_StarShaped. The selected viewpoints are highlighted in red.
+<font size=2> The architectures of LFNet variants.  (a) LFNet-9 × 9. (b) LFNet-3 × 3. (c) LFnet-StarShaped. The selected viewpoints are highlighted in red.
 
 ## Installation
 
@@ -37,7 +37,7 @@ We generate micro-lens image arrays and central viewing images, and produce corr
 Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgKa5-NHMXWjorAt2kBaSU3).
 
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/dataset_construction.png" /></div>
-<font size=3> Flowchart of the dataset construction. (a) Lytro Illum camera. (b) SA image array generation. (c) ML image array generation. (d) The ground-truth map for the central viewing image.
+<font size=2> Flowchart of the dataset construction. (a) Lytro Illum camera. (b) SA image array generation. (c) ML image array generation. (d) The ground-truth map for the central viewing image.
 
 
 * Data pre-processing
@@ -95,7 +95,7 @@ Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art 
 (c) LFNet-9 × 9. (d) LFS [1]. (e) DILF [2]. (f) WSC [3]. (g) Multi-cue [4]. The first five samples are taken from the proposed Lytro Illum dataset, 
 the middle three samples are taken from the HFUT-Lytro dataset, and the last two samples are taken from the LFSD dataset.
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/result.png" /></div>
-<font size=3> Visual comparison of different LFNet variants and other state-of-the-art methods on three datasets.
+<font size=2> Visual comparison of different LFNet variants and other state-of-the-art methods on three datasets.
 
 
 ## References
