@@ -30,19 +30,15 @@ Note: matlabroot is the root directory of MATLAB in your system.
 
 * Dataset
 
-<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/dataset_construction.png" /></div>
-
-
-<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/data_examples.png" /></div>
-
-
 This project introduces a novel dataset, named Lytro illum .Using a Lytro Illum camera,
 we collect 640 light fields with significant variations in terms of size, textureness, background clutter and illumination, etc.
 We provide micro-lens image array, central viewing image and ground-truths. 
 Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgKa5-NHMXWjorAt2kBaSU3).
 
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/dataset_construction.png" /></div>
 
 
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/data_examples.png" /></div>
 
 
 * Data processing
