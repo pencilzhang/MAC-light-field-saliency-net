@@ -63,6 +63,12 @@ Note that the file path is changed to the path of your system.
 
 * To get the pretrained models, please download pretrained models on XXXXXXXX, and put the file in  [pretrain](/pretrain) folder.
 
+## Pretrained models
+To get the pretrained models on the Illum dataset, please download form [here](https://drive.google.com/open?id=12L8nYlkMsnjUHWJm97gIkDGdTD7GxUDp).
+After decompression,please put them in the three folders under the `/model/` path.
+
+
+
 ## Test
 
 Run `test.py` to test and save the test results as a `.mat` file.
