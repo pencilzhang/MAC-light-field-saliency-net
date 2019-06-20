@@ -76,7 +76,7 @@ else:
 caffemodel='../pretrain/pretrain.caffemodel'
 solver=caffe.SGDSolver('../LFNet_model/'+LFNet_model+'/solver_train_LF_aug.prototxt')
 solver.net.copy_from(caffemodel)
-#solver.test_nets[0].copy_from(caffemodel)
+
 
 max_iter = 160000
 
