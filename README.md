@@ -46,8 +46,9 @@ Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgK
 
 * Run python `augment.py` for data augmentation.
 
-* Convert GTs to the labels that can be entered into the Caffe network by running:
-`./convert_labels.py ./data/train/GT_aug/ ./data/train/name.txt ./data/train/annotations/`
+* Convert GTs to the labels that can be entered into the Caffe network by running
+
+   `./convert_labels.py ./data/train/GT_aug/ ./data/train/name.txt ./data/train/annotations/`
 
 * Copy the labels to the [val/annotations/](	/data/val/annotations/):
 `cp ./data/train/annotations/* ./data/val/annotations/`
@@ -89,7 +90,7 @@ Then, please put them under the corresponding [models](/models/) paths.
 
 
 ## Results
-[The saliency maps](https://drive.google.com/open?id=1a-UiTu49rbQkJ7RYrjIayOwPaO2RGtfZ) of three proposed models on the Lytro illum dataset are provided in the repo.
+[The computed saliency maps](https://drive.google.com/open?id=1a-UiTu49rbQkJ7RYrjIayOwPaO2RGtfZ) of three proposed models on the Lytro illum dataset are provided in the repo.
 
 Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art methods on three datasets is shown in the following figure. (a) Central viewing/all-focus images. (b) Ground truth maps. 
 (c) LFNet-9 × 9. (d) LFS [1]. (e) DILF [2]. (f) WSC [3]. (g) Multi-cue [4]. The first five samples are taken from the proposed Lytro Illum dataset, 
