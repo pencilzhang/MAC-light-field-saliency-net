@@ -40,19 +40,17 @@ Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgK
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/dataset_construction.png" /></div>
 Flowchart of the dataset construction. (a) Lytro Illum camera. (b) SA image array generation. (c) ML image array generation. (d) The ground-truth map for the central viewing image.
 
-<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/data_examples.png" /></div>
-Some representative examples.
 
-* Data processing
+* Data pre-processing
 
 Put the micro-lens image arrays into [data/original_data/](/data/original_data) and ground-truths into [data/original_GT/](/data/original_GT).
 
 Run python `augment.py` for data augmentation.
 
-Convert GT to the label that can be entered into the Caffe network by running:
+Convert GTs to the labels that can be entered into the Caffe network by running:
 `./convert_labels.py ./data/train/GT_aug/ ./data/train/name.txt ./data/train/annotations/`
 
-Copy the label to the [val/annotations/](	/data/val/annotations/):
+Copy the labels to the [val/annotations/](	/data/val/annotations/):
 `cp ./data/train/annotations/* ./data/val/annotations/`
 
 Copy the original images to the [val/JPGImages/](/data/val/JPGImages/):
@@ -68,7 +66,7 @@ For example, train1.txt indicates the train data used in the 1st-fold experiment
 * First go to `deeplab-public-ver2/colorname_layers.py`, then
 replace the caffe_root with your caffe path in your system. 
 
-* We initialize the backbone model with [DeepLabv2](https://drive.google.com/open?id=1ed4HmhGn50uz21wUavIkZYcYz8OjRg4l) pre-trained on the PASCAL VOC 2012 segmentation benchmark. Then Create a new folder `pretrain` and place the downloaded pretrained model in this folder.
+* We initialize the backbone model with [DeepLabv2](https://drive.google.com/open?id=1ed4HmhGn50uz21wUavIkZYcYz8OjRg4l) pre-trained on the PASCAL VOC 2012 segmentation benchmark. Then Create a new `pretrain`  folder and place the downloaded pretrained model in this folder.
   
 
 * There are two ways to train the whole network:
@@ -81,7 +79,7 @@ Note that the file path is changed to the path of your system.
 
 ## Pretrained models
 To get the pretrained models on the Lytro Illum dataset, please download them form [GoogleDrive](https://drive.google.com/open?id=12L8nYlkMsnjUHWJm97gIkDGdTD7GxUDp).
-Then, please put them under the corresponding [model](/model/) paths.
+Then, please put them under the corresponding [models](/models/) paths.
 
 
 
@@ -95,7 +93,7 @@ Run `/evaluation/saliencymap.m` to get the final saliency map. The other `.m` fi
 ## Results
 [The saliency maps](https://drive.google.com/open?id=1a-UiTu49rbQkJ7RYrjIayOwPaO2RGtfZ) of three proposed models on the Lytro illum dataset are provided in the repo.
 
-Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art methods on three datasets is shown in the following figure.. (a) Central viewing/all-focus images. (b) Ground truth maps. 
+Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art methods on three datasets is shown in the following figure. (a) Central viewing/all-focus images. (b) Ground truth maps. 
 (c) LFNet-9 × 9. (d) LFS [1]. (e) DILF [2]. (f) WSC [3]. (g) Multi-cue [4]. The first five samples are taken from the proposed Lytro Illum dataset, 
 the middle three samples are taken from the HFUT-Lytro dataset, and the last two samples are taken from the LFSD dataset.
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/result.png" /></div>
