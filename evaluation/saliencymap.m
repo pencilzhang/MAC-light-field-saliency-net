@@ -14,7 +14,7 @@ for j = 1:length( dat )
     map=uint8(TB*255);
     c=strfind(tempFileName,'_blob');
     name=tempFileName(1:c-1);
-    imwrite(map,['../result/result_99/1fold_result/salmap/',name,'.png']);
+    imwrite(map,['../result/result_99/1fold_result/saliencymap/',name,'.png']);
     display(num2str(j));
         
 end
