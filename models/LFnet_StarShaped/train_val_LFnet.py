@@ -6,7 +6,7 @@ Created on Mon Apr 16 10:19:43 2018
 @author: dhubel
 """
 
-caffe_root ='/home/dhubel/deeplab_v2/deeplab-public-ver2/'  # replace caffe_root to your system
+caffe_root ='/home/dhubel/deeplab_v2/deeplab-public-ver2/'  # Replace the caffe_root with your caffe path in your system
 
 import sys
 sys.path.insert(0, caffe_root + 'python')
@@ -143,9 +143,7 @@ def cn_LF(split):
     
     n.fc8= L.Eltwise(n.fc8_1, n.fc8_2,n.fc8_3,n.fc8_4,
                      operation=P.Eltwise.SUM)
-    
-#    n.label_shrink=L.Interp(n.label,interp_param=dict(shrink_factor=8 ,pad_beg= 0, pad_end=0))
-    
+     
     n.fc8_shrink=L.Interp(n.fc8,interp_param=dict(zoom_factor=8 ))
     n.socre=L.Crop(n.fc8_shrink,n.label);
 #    
