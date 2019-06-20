@@ -29,7 +29,7 @@ Note: matlabroot is the root directory of MATLAB in your system.
 
 ## Data
 
-#### Dataset
+### Dataset
 
 This project introduces a new light field dataset using a Lytro Illum camera.
 We collect 640 light fields with significant variations in terms of size, textureness, background clutter and illumination, etc.
@@ -40,7 +40,7 @@ Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgK
 <font size=2> Flowchart of the dataset construction. (a) Lytro Illum camera. (b) SA image array generation. (c) ML image array generation. (d) The ground-truth map for the central viewing image.
 
 
-#### Data pre-processing
+### Data pre-processing
 
 * Put the micro-lens image arrays into [data/original_data/](/data/original_data) and ground-truths into [data/original_GT/](/data/original_GT).
 
