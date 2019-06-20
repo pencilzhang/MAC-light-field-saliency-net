@@ -4,7 +4,7 @@ Created on Thu Oct 12 20:44:14 2017
 
 @author: dmarr
 """
-#from pylab import*
+
 caffe_root='/home/dhubel/deeplab_v2/deeplab-public-ver2/'
 import sys
 sys.path.insert(0,caffe_root + 'python')
