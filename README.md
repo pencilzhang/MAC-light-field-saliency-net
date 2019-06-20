@@ -27,7 +27,24 @@ Note: matlabroot is the root directory of MATLAB in your system.
 
 
 ## Data
-There are 640 original images in [data/original_data](/data/original_data), and the corresponding ground-truths are in [data/original_GT](/data/original_GT).
+
+* Dataset
+
+This project introduces a novel dataset, named Lytro illum .Using a Lytro Illum camera,
+we collect 640 light fields with significant variations in terms of size, textureness, background clutter and illumination, etc.
+We provide micro-lens image array, central viewing image and ground-truths. 
+Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgKa5-NHMXWjorAt2kBaSU3).
+
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/dataset_construction.png" /></div>
+
+
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/data_examples.png" /></div>
+
+
+* Data processing
+
+Put micro-lens image array into `data/original_data/` and put ground-truths into `data/original_GT/`.
+There are 640 original images in [data/original_data/](/data/original_data), and the corresponding ground-truths are in [data/original_GT/](/data/original_GT).
 
 Run python `augment.py` for data augmentation.
 
@@ -49,15 +66,27 @@ The corresponding val1.txt represents the test data used in the 1st-fold experim
 * First go to `deeplab-public-ver2/colorname_layers.py`, then
 replace the caffe_root with your caffe path in your system. 
 
+* Download the pretrain model [here](https://drive.google.com/open?id=1ed4HmhGn50uz21wUavIkZYcYz8OjRg4l) model that initialize the backbone model.
+  Create a new folder `pretrain` and place the downloaded pretrain model in this folder.
+  
+
 * There are two ways to train the network:
+
 (1) Run `train.py` to train the LFnet_9×9 network.
 If you need to train other models, you can replace 	`LFnet_99` with `LFnet_33` or `LFnet_StarShaped`
 k indicates the first fold cross validation, which can be changed into 1-5.
+
 (2) Open the terminal, switch to the caffe root directory, 
 run:`/LFNet_model/LFnet_99/train_LF_net.sh`. 
 Note that the file path is changed to the path of your system.
 
-* To get the pretrained models, please download pretrained models on XXXXXXXX, and put the file in  [pretrain](/pretrain) folder.
+
+
+## Pretrained models
+To get the pretrained models on the Illum dataset, please download form [here](https://drive.google.com/open?id=12L8nYlkMsnjUHWJm97gIkDGdTD7GxUDp).
+After decompression,please put them in the three folders under the `/model/` path.
+
+
 
 ## Test
 
@@ -67,8 +96,10 @@ Run `/evaluation/salientmap.m` to get the final saliency map. The other `.m` fil
 
 
 ## Results
-
-Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art methods on three datasets. (a) Central viewing/all-focus images. (b) Ground truth maps. (c) LFNet-9 × 9. (d) LFS [1]. (e) DILF [2]. (f) WSC [3]. (g) Multi-cue [4]. The first five samples are taken from the proposed Lytro Illum dataset, the middle three samples are taken from the HFUT-Lytro dataset, and the last two samples are taken from the LFSD dataset.
+The saliency map of three proposed models on the Lytro illum dataset are provided [here](https://drive.google.com/open?id=1a-UiTu49rbQkJ7RYrjIayOwPaO2RGtfZ).
+Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art methods on three datasets. (a) Central viewing/all-focus images. (b) Ground truth maps. 
+(c) LFNet-9 × 9. (d) LFS [1]. (e) DILF [2]. (f) WSC [3]. (g) Multi-cue [4]. The first five samples are taken from the proposed Lytro Illum dataset, 
+the middle three samples are taken from the HFUT-Lytro dataset, and the last two samples are taken from the LFSD dataset.
 
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/result.png" /></div>
 
@@ -79,9 +110,6 @@ Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art 
 3. N. Li, B. Sun, and J. Yu, “A weighted sparse coding framework for saliency detection,” in IEEE Conference on Computer Vision and Pattern Recognition, 2015.
 4. J. Zhang, M. Wang, L. Lin, X. Yang, J. Gao, and Y. Rui, “Saliency detection on light field: A multi-cue approach,” ACM Transactions on Multimedia Computing, Communications, and Applications, 2017.
 
-## TODO
--   TODO: Pretrained models release
--   TODO: Dataset release
 
 ## Citation
 
@@ -98,7 +126,8 @@ If you find our paper and repo useful, please cite our paper. Thanks!
 
 ## Acknowledgement
 
-Our light field saliency network is built on top of the  [DeepLab v2-Caffe](https://bitbucket.org/aquariusjay/deeplab-public-ver2/src/master/), but it could be extended to other network architectures. We thank Liang-Chieh Chen for releasing DeepLabv2-Caffe codebase.
+Our light field saliency network is built on top of the  [DeepLab v2-Caffe](https://bitbucket.org/aquariusjay/deeplab-public-ver2/src/master/), 
+but it could be extended to other network architectures. We thank Liang-Chieh Chen for releasing DeepLabv2-Caffe codebase.
 
 
 ## Contact
