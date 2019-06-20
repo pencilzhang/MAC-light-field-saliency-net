@@ -4,13 +4,10 @@
     LFNet_model='LFNet_99';
     WF=0;
     for k=1:5
-
-        salpath= ['../result/',LFNet_model,'/',num2str(k),'fold_result/salmap'];
+        salpath= ['../result/',LFNet_model,'/',num2str(k),'fold_result/saliencymap'];
         gtpath= '../data/original_GT';
-
         salientmappath = fullfile(salpath, '*.png' );
         imnames=dir(salientmappath);
-
         imNum = length(imnames);
         belt2=0.3;
         reca = zeros(imNum,1);
@@ -40,16 +37,10 @@
         P=mean(prec);
         R=mean(reca);
         WFmeasure=((1+belt2)*P*R)/(eps+belt2*P+R);
-
-
         WF=WF+WFmeasure;
     end
-
-
     WF=WF/5
     end
-
-
 
 
     function [R,P]= WFb(FG,GT)
