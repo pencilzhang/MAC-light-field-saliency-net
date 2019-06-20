@@ -29,7 +29,7 @@ Note: matlabroot is the root directory of MATLAB in your system.
 
 ## Data
 
-* Dataset
+#### Dataset
 
 This project introduces a new light field dataset using a Lytro Illum camera.
 We collect 640 light fields with significant variations in terms of size, textureness, background clutter and illumination, etc.
@@ -40,29 +40,29 @@ Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgK
 <font size=2> Flowchart of the dataset construction. (a) Lytro Illum camera. (b) SA image array generation. (c) ML image array generation. (d) The ground-truth map for the central viewing image.
 
 
-* Data pre-processing
+#### Data pre-processing
 
-Put the micro-lens image arrays into [data/original_data/](/data/original_data) and ground-truths into [data/original_GT/](/data/original_GT).
+* Put the micro-lens image arrays into [data/original_data/](/data/original_data) and ground-truths into [data/original_GT/](/data/original_GT).
 
-Run python `augment.py` for data augmentation.
+* Run python `augment.py` for data augmentation.
 
-Convert GTs to the labels that can be entered into the Caffe network by running:
+* Convert GTs to the labels that can be entered into the Caffe network by running:
 `./convert_labels.py ./data/train/GT_aug/ ./data/train/name.txt ./data/train/annotations/`
 
-Copy the labels to the [val/annotations/](	/data/val/annotations/):
+* Copy the labels to the [val/annotations/](	/data/val/annotations/):
 `cp ./data/train/annotations/* ./data/val/annotations/`
 
-Copy the original images to the [val/JPGImages/](/data/val/JPGImages/):
+* Copy the original images to the [val/JPGImages/](/data/val/JPGImages/):
 `cp ./data/original_data/* ./data/val/JPGImages/`
 
-Put training and testing data in [data/train/](/data/train/).
+* Put training and testing data in [data/train/](/data/train/) and [data/val/](/data/val/).
 5-fold cross-validation is used in the project.
 The generated image index are in the `.txt` files.
 For example, train1.txt indicates the train data used in the 1st-fold experiment. 
 
 
 ## Train
-* First go to `deeplab-public-ver2/colorname_layers.py`, then
+* Go to `deeplab-public-ver2/colorname_layers.py`, then
 replace the caffe_root with your caffe path in your system. 
 
 * We initialize the backbone model with [DeepLabv2](https://drive.google.com/open?id=1ed4HmhGn50uz21wUavIkZYcYz8OjRg4l) pre-trained on the PASCAL VOC 2012 segmentation benchmark. Then Create a new `pretrain`  folder and place the downloaded pretrained model in this folder.
@@ -83,9 +83,9 @@ Then, please put them under the corresponding [models](/models/) paths.
 
 ## Test
 
-Run `test.py` to test and save the test results as a `.mat` file.
+* Run `test.py` to test and save the test results as a `.mat` file.
 
-Run `/evaluation/saliencymap.m` to get the final saliency map. The other `.m` files in [evaluation](	/evaluation/) are used to calculate quantitative indicators such as F-measure,  weighted F-measure,  mean absolute error,  average precision, and precision-recall curve.
+* Run `/evaluation/saliencymap.m` to get the final saliency map. The other `.m` files in [evaluation](	/evaluation/) are used to calculate quantitative indicators such as F-measure,  weighted F-measure,  mean absolute error,  average precision, and precision-recall curve.
 
 
 ## Results
