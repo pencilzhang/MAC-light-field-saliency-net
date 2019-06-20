@@ -21,8 +21,8 @@ We release the code of [Light Field Saliency Detection with Deep Convolutional N
 [Matlab 2016b](https://www.mathworks.com/products/matlab.html)
 
 Do the following two steps to make sure that .m files can be used in Python:
-- cd `matlabroot/extern/engines/python` 
-- python `setup.py`
+- `cd matlabroot/extern/engines/python` 
+- `python setup.py`
 
 Note: matlabroot is the root directory of MATLAB in your system.
 
@@ -44,11 +44,11 @@ Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgK
 
 * Put the micro-lens image arrays into [data/original_data/](/data/original_data) and ground-truths into [data/original_GT/](/data/original_GT).
 
-* Run python `augment.py` for data augmentation.
+* Run `python augment.py` for data augmentation.
 
 * Convert GTs to the labels that can be entered into the Caffe network by running
 
-   `./convert_labels.py ./data/train/GT_aug/ ./data/train/name.txt ./data/train/annotations/`
+   `python convert_labels.py ./data/train/GT_aug/ ./data/train/name.txt ./data/train/annotations/`
 
 * Copy the labels to the [val/annotations/](	/data/val/annotations/):
 `cp ./data/train/annotations/* ./data/val/annotations/`
@@ -63,15 +63,14 @@ For example, train1.txt indicates the train data used in the 1st-fold experiment
 
 
 ## Train
-* Go to `deeplab-public-ver2/colorname_layers.py`, then
-replace the caffe_root with your caffe path in your system. 
+* Replace the caffe_root in `deeplab-public-ver2/colorname_layers.py`with the caffe path in your system. 
 
-* We initialize the backbone model with [DeepLabv2](https://drive.google.com/open?id=1ed4HmhGn50uz21wUavIkZYcYz8OjRg4l) pre-trained on the PASCAL VOC 2012 segmentation benchmark. Then Create a new `pretrain`  folder and place the downloaded pretrained model in this folder.
+* We initialize the backbone model with [DeepLabv2](https://drive.google.com/open?id=1ed4HmhGn50uz21wUavIkZYcYz8OjRg4l) pre-trained on the PASCAL VOC 2012 segmentation benchmark. Then Create a new "pretrain"  folder and place the downloaded pretrained model in this folder.
   
 * There are two ways to train the whole network:
-(1) Run `train.py` to train the LFnet_9×9 network. If you need to train other models, you can replace 	`LFnet_99` with `LFnet_33` or `LFnet_StarShaped`. k indicates the first fold cross validation, which can be changed into 1-5.
+(1) Run `python train.py` to train the LFnet_9×9 network. If you need to train other models, you can replace 	`LFnet_99` with `LFnet_33` or `LFnet_StarShaped`. k indicates the first fold cross validation, which can be changed into 1-5.
 (2) Open the terminal, switch to the caffe root directory, 
-run:`/LFNet_model/LFnet_99/train_LF_net.sh`. 
+run: `/LFNet_model/LFnet_99/train_LF_net.sh`. 
 Note that the file path is changed to the path of your system.
 
 
@@ -84,7 +83,7 @@ Then, please put them under the corresponding [models](/models/) paths.
 
 ## Test
 
-* Run `test.py` to test and save the test results as a `.mat` file.
+* Run `python test.py` to test and save the test results as a `.mat` file.
 
 * Run `/evaluation/saliencymap.m` to get the final saliency map. The other `.m` files in [evaluation](	/evaluation/) are used to calculate quantitative indicators such as F-measure,  weighted F-measure,  mean absolute error,  average precision, and precision-recall curve.
 
