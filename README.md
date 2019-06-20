@@ -63,7 +63,7 @@ For example, train1.txt indicates the train data used in the 1st-fold experiment
 
 
 ## Train
-* Replace the caffe_root in `deeplab-public-ver2/colorname_layers.py`with the caffe path in your system. 
+* Replace the `caffe_root` in [deeplab-public-ver2/colorname_layers.py](/deeplab-public-ver2/colorname_layers.py) with the caffe path in your system. 
 
 * We initialize the backbone model with [DeepLabv2](https://drive.google.com/open?id=1ed4HmhGn50uz21wUavIkZYcYz8OjRg4l) pre-trained on the PASCAL VOC 2012 segmentation benchmark. Then Create a new "pretrain"  folder and place the downloaded pretrained model in this folder.
   
