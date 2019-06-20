@@ -49,6 +49,8 @@ The corresponding val1.txt represents the test data used in the 1st-fold experim
 * First go to `deeplab-public-ver2/colorname_layers.py`, then
 replace the caffe_root with your caffe path in your system. 
 
+* Download the pretrain [here](https://drive.google.com/open?id=1ed4HmhGn50uz21wUavIkZYcYz8OjRg4l) model that initialize the backbone model
+
 * There are two ways to train the network:
 (1) Run `train.py` to train the LFnet_9×9 network.
 If you need to train other models, you can replace 	`LFnet_99` with `LFnet_33` or `LFnet_StarShaped`
