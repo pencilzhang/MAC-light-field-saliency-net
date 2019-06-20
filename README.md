@@ -26,7 +26,7 @@ Do the following two steps to make sure that the .m file can be used in Python:
 Note: matlabroot is the root directory of MATLAB in your system.
 
 
-## Data
+## Data processing
 We provide micro-lens image array, central viewing image and ground-truths. 
 Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgKa5-NHMXWjorAt2kBaSU3).
 You can put micro-lens image array into `data/original_data/` and put ground-truths into `data/original_GT/`.
