@@ -25,12 +25,12 @@ if w<h
     imwrite(img1,[save_path,'/',tempname,'_crop1','.PNG']);
     imwrite(G1,[GTsave_path,'/',tempname,'_crop1','.PNG']);
 	
-    %% If cut the lens image array, please cancel the following two lines of comments
+    %% If crop the lens image array, please cancel the following two lines of comments
     m=50;n=30;
     img=imcrop(image,[m*9+1,n*9+1,(width+1)*9-1,(height+1)*9-1]);
     G=imcrop(GT,[m+1,n+1,width,height]);
 	
-	%% If cut the center view image,please cancel the following two lines of comments
+	%% If crop the center view image,please cancel the following two lines of comments
 	% img=imcrop(image,[m+1,n+1,width,height]);
     % G=imcrop(GT,[m+1,n+1,width,height]);
 	
@@ -47,11 +47,11 @@ else
 
     m=30;n=50;
 	
-	%% If cut the lens image array, please cancel the following two lines of comments
+	%% If crop the lens image array, please cancel the following two lines of comments
     img=imcrop(image,[m*9+1,n*9+1,(width+1)*9-1,(height+1)*9-1]);
     G=imcrop(GT,[m+1,n+1,width,height]);
 	
-    %% If cut the center view image,please cancel the following two lines of comments
+    %% If crop the center view image,please cancel the following two lines of comments
     % img=imcrop(image,[m+1,n+1,width,height]);
     % G=imcrop(GT,[m+1,n+1,width,height]); 
 	
