@@ -26,11 +26,28 @@ Do the following two steps to make sure that the .m file can be used in Python:
 Note: matlabroot is the root directory of MATLAB in your system.
 
 
-## Data processing
+## Data
+
+* Dataset
+
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/dataset_construction.png" /></div>
+
+
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/data_examples.png" /></div>
+
+
+This project introduces a novel dataset, named Lytro illum .Using a Lytro Illum camera,
+we collect 640 light fields with significant variations in terms of size, textureness, background clutter and illumination, etc.
 We provide micro-lens image array, central viewing image and ground-truths. 
 Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgKa5-NHMXWjorAt2kBaSU3).
-You can put micro-lens image array into `data/original_data/` and put ground-truths into `data/original_GT/`.
 
+
+
+
+
+* Data processing
+
+Put micro-lens image array into `data/original_data/` and put ground-truths into `data/original_GT/`.
 There are 640 original images in [data/original_data](/data/original_data), and the corresponding ground-truths are in [data/original_GT](/data/original_GT).
 
 Run python `augment.py` for data augmentation.
@@ -81,7 +98,7 @@ Run `/evaluation/salientmap.m` to get the final saliency map. The other `.m` fil
 
 
 ## Results
-The saliency map of three proposed models on the illum dataset are provided [here](https://drive.google.com/open?id=1a-UiTu49rbQkJ7RYrjIayOwPaO2RGtfZ)
+The saliency map of three proposed models on the Lytro illum dataset are provided [here](https://drive.google.com/open?id=1a-UiTu49rbQkJ7RYrjIayOwPaO2RGtfZ)
 
 Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art methods on three datasets. (a) Central viewing/all-focus images. (b) Ground truth maps. (c) LFNet-9 × 9. (d) LFS [1]. (e) DILF [2]. (f) WSC [3]. (g) Multi-cue [4]. The first five samples are taken from the proposed Lytro Illum dataset, the middle three samples are taken from the HFUT-Lytro dataset, and the last two samples are taken from the LFSD dataset.
 
