@@ -6,7 +6,7 @@ We release the code of [Light Field Saliency Detection with Deep Convolutional N
 
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/framework.png" /></div>
 
-## Architectures of three proposed LFNet. 
+## Architectures of three proposed LFNet variants 
 
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/LFNet.png" /></div>
 
@@ -19,15 +19,15 @@ We release the code of [Light Field Saliency Detection with Deep Convolutional N
 [Caffe](https://caffe.berkeleyvision.org/)
 
 [Matlab 2016b](https://www.mathworks.com/products/matlab.html). 
-Do the following two steps to make sure that the .m file can be used in Python
+Do the following two steps to make sure that the .m file can be used in Python:
 - cd `matlabroot/extern/engines/python` 
 - python `setup.py` install
 
-Note: matlabroot is the root directory of MATLAB in your system
+Note: matlabroot is the root directory of MATLAB in your system.
 
 
 ## Data
-There are 640 original images in [data/original_data](/data/original_data), and the corresponding ground-truths are in [data/original_gt](/data/original_gt).
+There are 640 original images in [data/original_data](/data/original_data), and the corresponding ground-truths are in [data/original_GT](/data/original_GT).
 
 Run python `augment.py` for data augmentation.
 
@@ -46,25 +46,18 @@ For example, train1.txt indicates the train data used in the 1st-fold experiment
 The corresponding val1.txt represents the test data used in the 1st-fold experiment.
 
 ## Train
-First go to `deeplab-public-ver2/colorname_layers.py`, then
+* First go to `deeplab-public-ver2/colorname_layers.py`, then
 replace the caffe_root with your caffe path in your system. 
 
-There are two ways to train the network:
-* Method 1):
-
-Run `train.py` to train the LFnet_9×9 network.
+* There are two ways to train the network:
+(1) Run `train.py` to train the LFnet_9×9 network.
 If you need to train other models, you can replace 	`LFnet_99` with `LFnet_33` or `LFnet_StarShaped`
 k indicates the first fold cross validation, which can be changed into 1-5.
-
-* Method 2):
-
-Open the terminal, switch to the caffe root directory, 
+(2) Open the terminal, switch to the caffe root directory, 
 run:`/LFNet_model/LFnet_99/train_LF_net.sh`. 
 Note that the file path is changed to the path of your system.
 
-* Pretrained models
-
-To get the pretrained models, please download pretrained models on XXXX, and put the file in folder pretrain
+* To get the pretrained models, please download pretrained models on XXXXXXXX, and put the file in  [pretrain](/pretrain) folder.
 
 ## Test
 
@@ -86,6 +79,10 @@ Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art 
 3. N. Li, B. Sun, and J. Yu, “A weighted sparse coding framework for saliency detection,” in IEEE Conference on Computer Vision and Pattern Recognition, 2015.
 4. J. Zhang, M. Wang, L. Lin, X. Yang, J. Gao, and Y. Rui, “Saliency detection on light field: A multi-cue approach,” ACM Transactions on Multimedia Computing, Communications, and Applications, 2017.
 
+## TODO
+-   TODO: Pretrained models release
+-   TODO: Dataset release
+
 ## Citation
 
 If you find our paper and repo useful, please cite our paper. Thanks!
@@ -94,7 +91,7 @@ If you find our paper and repo useful, please cite our paper. Thanks!
 @article{Zhang2019lfnet,
     title={Light Field Saliency Detection with Deep Convolutional Networks},
     author={Zhang, Jun and Liu, Yamei and Zhang, Shengping, Poppe, Ronald and Wang, Meng},
-    journal={arXiv preprint arXiv:XXXX},
+    journal={arXiv preprint arXiv: 2737364},
     year={2019}
 }  
 ```
@@ -102,3 +99,10 @@ If you find our paper and repo useful, please cite our paper. Thanks!
 ## Acknowledgement
 
 Our light field saliency network is built on top of the  [DeepLab v2-Caffe](https://bitbucket.org/aquariusjay/deeplab-public-ver2/src/master/), but it could be extended to other network architectures. We thank Liang-Chieh Chen for releasing DeepLabv2-Caffe codebase.
+
+
+## Contact
+
+[Jun Zhang](mailto:zhangjun1126@gmail.com),  [Yamei Liu](mailto:liuarmg@gmail.com)
+
+Questions can also be left as issues in the repository. We will be happy to answer them.
