@@ -5,13 +5,12 @@ We release the code of [Light Field Saliency Detection with Deep Convolutional N
 ## Overall network
 
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/framework.png" /></div>
-The proposed network architecture.
+<font size=3> The proposed network architecture.
 
 ## Architectures of three proposed LFNet variants 
 
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/LFNet.png" /></div>
-
-The architectures of LFNet variants.  (a) LFNet-9 × 9. (b) LFNet-3 × 3. (c) LFnet_StarShaped. The selected viewpoints are highlighted in red.
+<font size=3> The architectures of LFNet variants.  (a) LFNet-9 × 9. (b) LFNet-3 × 3. (c) LFnet_StarShaped. The selected viewpoints are highlighted in red.
 
 ## Installation
 
@@ -38,7 +37,7 @@ We generate micro-lens image arrays and central viewing images, and produce corr
 Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgKa5-NHMXWjorAt2kBaSU3).
 
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/dataset_construction.png" /></div>
-Flowchart of the dataset construction. (a) Lytro Illum camera. (b) SA image array generation. (c) ML image array generation. (d) The ground-truth map for the central viewing image.
+<font size=3> Flowchart of the dataset construction. (a) Lytro Illum camera. (b) SA image array generation. (c) ML image array generation. (d) The ground-truth map for the central viewing image.
 
 
 * Data pre-processing
@@ -68,7 +67,6 @@ replace the caffe_root with your caffe path in your system.
 
 * We initialize the backbone model with [DeepLabv2](https://drive.google.com/open?id=1ed4HmhGn50uz21wUavIkZYcYz8OjRg4l) pre-trained on the PASCAL VOC 2012 segmentation benchmark. Then Create a new `pretrain`  folder and place the downloaded pretrained model in this folder.
   
-
 * There are two ways to train the whole network:
 (1) Run `train.py` to train the LFnet_9×9 network. If you need to train other models, you can replace 	`LFnet_99` with `LFnet_33` or `LFnet_StarShaped`. k indicates the first fold cross validation, which can be changed into 1-5.
 (2) Open the terminal, switch to the caffe root directory, 
@@ -97,7 +95,7 @@ Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art 
 (c) LFNet-9 × 9. (d) LFS [1]. (e) DILF [2]. (f) WSC [3]. (g) Multi-cue [4]. The first five samples are taken from the proposed Lytro Illum dataset, 
 the middle three samples are taken from the HFUT-Lytro dataset, and the last two samples are taken from the LFSD dataset.
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/result.png" /></div>
-Visual comparison of different LFNet variants and other state-of-the-art methods on three datasets.
+<font size=3> Visual comparison of different LFNet variants and other state-of-the-art methods on three datasets.
 
 
 ## References
