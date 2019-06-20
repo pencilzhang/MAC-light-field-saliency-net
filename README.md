@@ -27,6 +27,10 @@ Note: matlabroot is the root directory of MATLAB in your system.
 
 
 ## Data
+We provide micro-lens image array, central viewing image and ground-truths. 
+Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgKa5-NHMXWjorAt2kBaSU3).
+You can put micro-lens image array into `data/original_data` and put ground-truths into `data/original_GT`.
+
 There are 640 original images in [data/original_data](/data/original_data), and the corresponding ground-truths are in [data/original_GT](/data/original_GT).
 
 Run python `augment.py` for data augmentation.
