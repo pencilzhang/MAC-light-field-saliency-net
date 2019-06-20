@@ -43,7 +43,7 @@ def vis_square(data,name):
                    + ((0, 0),) * (data.ndim - 3))  
         data = np.pad(data, padding, mode='constant', constant_values=1)  
   
-        # tile the filters into an image  
+        # Tile the filters into an image  
         data = data.reshape((n, n) + data.shape[1:]).transpose((0, 2, 1, 3) + tuple(range(4, data.ndim + 1)))  
         data = data.reshape((n * data.shape[1], n * data.shape[3]) + data.shape[4:])  
         plt.figure()
@@ -58,12 +58,12 @@ def vis_square(data,name):
 net_test.forward()   
 
        
-##  visual feature map
+##  Visual feature map
 name='conv3_1'
 feat = net_test.blobs[name].data[0]
 vis_square(feat,name)
       
-### visual convolution kernel
+### Visual convolution kernel
 
 #name='LF_conv1_1'
 #feat = net_test.params[name][0].data

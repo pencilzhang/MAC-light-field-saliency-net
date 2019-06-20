@@ -16,14 +16,14 @@ import matlab.engine
 eng=matlab.engine.start_matlab()
 
    
-def Aug_geometric(dir,dir_GT,tempname,save_dir,save_GT):  ## geometric transformation
+def Aug_geometric(dir,dir_GT,tempname,save_dir,save_GT):  ## Geometric transformation
     fullname=os.path.join(dir,tempname+'.PNG')
     fullname_GT=os.path.join(dir_GT,tempname+'.PNG')
     image = Image.open(fullname)
     GT=Image.open(fullname_GT)
     image.save(save_dir+'/'+tempname+'.PNG')
     GT.save(save_GT+'/'+tempname+'.PNG')
-    #rotate.flip,crop
+    #Rotate.flip,crop
     c=eng.augment_geometry(dir,dir_GT,tempname,save_dir,save_GT)
     
 def Aug_color(tempname,save_dir,save_GT):#Change brightness, chroma, contrast

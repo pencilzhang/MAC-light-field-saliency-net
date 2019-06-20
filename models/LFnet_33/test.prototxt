@@ -1165,7 +1165,7 @@ layer {
     phase: TEST
   }
   mat_write_param {
-    prefix: "../models/LFnet_33/result/1_result/pro/"
+    prefix: "../result/LFnet_33/1fold_result/pro/"
     source: "../data/val/val1.txt"
     strip: 0
     period: 1

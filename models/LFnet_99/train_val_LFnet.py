@@ -6,7 +6,7 @@ Created on Mon Apr 16 10:19:43 2018
 @author: dhubel
 """
 
-caffe_root ='/home/dhubel/deeplab_v2/deeplab-public-ver2/' # replace caffe_root to your system
+caffe_root ='/home/dhubel/deeplab_v2/deeplab-public-ver2/' # Replace the caffe_root with your caffe path in your system
 
 import sys
 sys.path.insert(0, caffe_root + 'python')

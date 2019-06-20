@@ -6,7 +6,7 @@
     F=0;
     for k=1:5
 
-        salpath= ['../result/',LFNet_model,'/',num2str(k),'fold_result/salmap'];
+        salpath= ['../result/',LFNet_model,'/',num2str(k),'fold_result/saliencymap'];
 
         gtpath= '../data/original_GT';
 
@@ -52,7 +52,7 @@
 
 
 
-        %%%%%% calculate Fmeasure
+        %%%%%% Calculate f_measure
         P=mean(prec);
         R=mean(reca);
         Fmeasure=((1+belt2)*P*R)/(belt2*P+R);

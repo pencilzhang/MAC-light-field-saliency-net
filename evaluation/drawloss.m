@@ -1,16 +1,11 @@
 function drawloss
 clc
 clear
-
-
 methods = {'train_loss','val_loss'}; 
-
 methods_colors = distinguishable_colors(length(methods));
 readpath = '../models/LFnet_99/loss'; 
-
 figure
 hold on
-
 for m = 1:length(methods)
     prFileName = strcat(readpath, '/', methods{m}, '.txt');
     R = load(prFileName);
@@ -19,7 +14,6 @@ for m = 1:length(methods)
     plot(iteration, loss,'color',methods_colors(m,:),'linewidth',2);   
 end 
   axis([0 160000 0 1.4]);
-% 
 hold off
 grid on;
 

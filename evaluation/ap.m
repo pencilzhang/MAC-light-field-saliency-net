@@ -5,14 +5,11 @@ LFNet_model='LFNet_99';
 AP=0;
 for k=1:5
     
-    salpath= ['../result/',LFNet_model,'/',num2str(k),'fold_result/salmap'];
-    
+    salpath= ['../result/',LFNet_model,'/',num2str(k),'fold_result/saliencymap'];
     gtpath= '../data/original_GT';
     salientmappath = fullfile(salpath, '*.png' );
-    % GTpath = fullfile(gtpath, '*.png' );
     imnames=dir(salientmappath);
-    
-    
+   
     imNum = length(imnames);
     precision = zeros(256,1);
     recall = zeros(256,1);

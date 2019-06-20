@@ -1,16 +1,6 @@
 function [precision,recall]=pr(salpath,gtpath)
-
-% 
-%  salpath= ['../result/',LFNet_model,'/',num2str(k),'fold_result/salmap'];
-% % 
-% gtpath= '../data/original_GT';
-
-
-
 salientmappath = fullfile(salpath, '*.png' );
-
 imnames=dir(salientmappath);
-
 
 imNum = length(imnames);
 precision = zeros(256,1);
@@ -45,26 +35,5 @@ for i=1:imNum
 end
 precision = precision./imNum;
 recall = recall./imNum;
-% figure,plot(recall,precision);
-% grid on;
 
-% recal = recall(end:-1:1);
-% preci = precision(end:-1:1);
-% 
-% ap = VOCap(recal,preci)
-
-
-
-% xlabel('Recall')
-% ylabel('Precision')
-% legend(method)
-% axis([0 1 0 1]);
-
-
-% pr = [precision;recall];
-
-% fid = fopen([savepath dataset, '_', method, '_PRCurve.txt'],'at');
-% fprintf(fid,'%f %f\n',pr);
-% fclose(fid);
-% disp('Done!');
 end

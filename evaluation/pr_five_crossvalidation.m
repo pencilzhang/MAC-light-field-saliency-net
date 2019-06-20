@@ -2,25 +2,21 @@
 %%  five-cross validation 
 function pr_five_crossvalidation
 
-method = 'LFnet_99';
+LFNet_model = 'LFnet_99';
 dataset = 'illum'; % name of the dataset
-methods = {'1_result','2_result','3_result','4_result','5_result'}; % you can add more names of methods
+methods = {'1fold_result','2fold_result','3fold_result','4fold_result','5fold_result'}; % You can add more names of methods
 methods_colors = distinguishable_colors(length(methods));
 savepath = '../PR_Curve/';
 P=zeros(256,1);
 r=zeros(256,1);
-%% load PRCurve.txt and draw PR curves
 figure
 hold on
 for m = 1:length(methods)
-    salpath= ['../models/',method,'/result/',methods{m},'/salmap'];
-    gtpath= '../data/original_GT';%% set your own GT path
-    
-    
+    salpath= strcat('../result/',LFNet_model,'/',methods{m},'/saliencymap');
+    gtpath= '../data/original_GT';%% Set your own GT path  
     [precision,recall]=pr(salpath,gtpath);
     P = P +precision;
     r=r+recall;
- 
     plot(recall, precision,'color',methods_colors(m,:),'linewidth',2);   
     m
 end
