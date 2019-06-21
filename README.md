@@ -117,7 +117,7 @@ If you find our paper and repo useful, please cite our paper. Thanks!
 @article{Zhang2019lfnet,
     title={Light Field Saliency Detection with Deep Convolutional Networks},
     author={Zhang, Jun and Liu, Yamei and Zhang, Shengping, Poppe, Ronald and Wang, Meng},
-    journal={arXiv preprint arXiv: 2737364},
+    journal={arXiv preprint arXiv: 1906.08331},
     year={2019}
 }  
 ```
