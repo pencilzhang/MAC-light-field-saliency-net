@@ -131,4 +131,5 @@ but it could be extended to other network architectures. We thank Liang-Chieh Ch
 ## Contact
 
 [Jun Zhang](mailto:zhangjun1126@gmail.com),  [Yamei Liu](mailto:liuarmg@gmail.com)
+
 Questions can also be left as issues in the repository. We will be happy to answer them.
