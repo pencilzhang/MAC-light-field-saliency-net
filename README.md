@@ -1,4 +1,4 @@
-﻿﻿# LFNet-light-field-saliency-net
+﻿# LFNet-light-field-saliency-net
 
 We release the code of [Light Field Saliency Detection with Deep Convolutional Networks](https://arxiv.org/abs/1906.08331), built on the  [DeepLab v2-Caffe codebase](https://bitbucket.org/aquariusjay/deeplab-public-ver2/src/master/).
 
