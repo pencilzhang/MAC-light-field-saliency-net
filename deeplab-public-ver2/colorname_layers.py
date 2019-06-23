@@ -2,7 +2,7 @@
 """
 Created on Wed Jan 18 17:50:27 2017
 
-@author: xgm
+@author: dhubel
 """
 caffe_root = '/home/dhubel/deeplab_v2/deeplab-public-ver2/'  # Replace the caffe_root with your caffe path in your system
 import sys
