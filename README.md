@@ -76,7 +76,7 @@ Note that the file path is changed to the path of your system.
 
 
 ## Pretrained models
-To get the pretrained models on the Lytro Illum dataset, please download them form [GoogleDrive](https://drive.google.com/open?id=12L8nYlkMsnjUHWJm97gIkDGdTD7GxUDp).
+To get the pretrained models on the Lytro Illum dataset, please download them form [GoogleDrive](https://drive.google.com/open?id=12L8nYlkMsnjUHWJm97gIkDGdTD7GxUDp) or [BaiduPan](https://pan.baidu.com/s/1IqBKSkgjbbesOAMuhTgpCg).
 Then, please put them under the corresponding [models](/models/) paths.
 
 
