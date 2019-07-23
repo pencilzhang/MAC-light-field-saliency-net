@@ -34,7 +34,7 @@ Note: matlabroot is the root directory of MATLAB in your system.
 This project introduces a new light field dataset using a Lytro Illum camera.
 We collect 640 light fields with significant variations in terms of size, textureness, background clutter and illumination, etc.
 We generate micro-lens image arrays and central viewing images, and produce corresponding ground-truth maps. 
-Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgKa5-NHMXWjorAt2kBaSU3) or[BaiduPan](https://pan.baidu.com/s/1KCNSzyKHJ-lELlXqPLgNUQ).
+Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgKa5-NHMXWjorAt2kBaSU3) or [BaiduPan](https://pan.baidu.com/s/1KCNSzyKHJ-lELlXqPLgNUQ).
 
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/dataset_construction.png" /></div>
 <font size=2> Flowchart of the dataset construction. (a) Lytro Illum camera. (b) SA image array generation. (c) ML image array generation. (d) The ground-truth map for the central viewing image.
