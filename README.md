@@ -4,13 +4,13 @@ We release the code of [Light Field Saliency Detection with Deep Convolutional N
 
 ## Overall network
 
-<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/framework.png" /></div>
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/MAC-light-field-saliency-net/raw/master/framework.png" /></div>
 <font size=2> The proposed network architecture.
 
-## Architectures of three proposed LFNet variants 
+## Architectures of three proposed MAC block variants 
 
-<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/LFNet.png" /></div>
-<font size=2> The architectures of LFNet variants.  (a) LFNet-9 × 9. (b) LFNet-3 × 3. (c) LFnet-StarShaped. The selected viewpoints are highlighted in red.
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/MAC-light-field-saliency-net/raw/master/MACblocks.png" /></div>
+<font size=2> The architectures of MAC block.  (a) MAC block-9 × 9. (b) MAC block-3 × 3. (c) MAC block-StarShaped. The selected viewpoints are highlighted in red.
 
 ## Installation
 
@@ -36,7 +36,7 @@ We collect 640 light fields with significant variations in terms of size, textur
 We generate micro-lens image arrays and central viewing images, and produce corresponding ground-truth maps. 
 Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgKa5-NHMXWjorAt2kBaSU3) or [BaiduPan](https://pan.baidu.com/s/1KCNSzyKHJ-lELlXqPLgNUQ).
 
-<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/dataset_construction.png" /></div>
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/MAC-light-field-saliency-net/raw/master/dataset_construction.png" /></div>
 <font size=2> Flowchart of the dataset construction. (a) Lytro Illum camera. (b) SA image array generation. (c) ML image array generation. (d) The ground-truth map for the central viewing image.
 
 
@@ -68,9 +68,9 @@ For example, train1.txt indicates the train data used in the 1st-fold experiment
 * We initialize the backbone model with [DeepLabv2](https://drive.google.com/open?id=1ed4HmhGn50uz21wUavIkZYcYz8OjRg4l) pre-trained on the PASCAL VOC 2012 segmentation benchmark. Then Create a new "pretrain"  folder and place the downloaded pretrained model in this folder.
   
 * There are two ways to train the whole network:
-(1) Run `python train.py` to train the LFnet_9×9 network. If you need to train other models, you can replace 	`LFnet_99` with `LFnet_33` or `LFnet_StarShaped`. k indicates the first fold cross validation, which can be changed into 1-5.
+(1) Run `python train.py` to train the MAC block-9×9 network. If you need to train other models, you can replace 	`MACblock_99` with `MACblock_33` or `MACblock_StarShaped`. k indicates the first fold cross validation, which can be changed into 1-5.
 (2) Open the terminal, switch to the caffe root directory, 
-run: `/LFNet_model/LFnet_99/train_LF_net.sh`. 
+run: `/models/MACblock_99/train_LF_net.sh`. 
 Note that the file path is changed to the path of your system.
 
 
@@ -91,11 +91,11 @@ Then, please put them under the corresponding [models](/models/) paths.
 ## Results
 [The computed saliency maps](https://drive.google.com/open?id=1a-UiTu49rbQkJ7RYrjIayOwPaO2RGtfZ) of three proposed models on the Lytro illum dataset are provided in the repo.
 
-Visual comparison of our best LFNet variant (LFNet-9 × 9) and state-of-the-art methods on three datasets is shown in the following figure. (a) Central viewing/all-focus images. (b) Ground truth maps. 
-(c) LFNet-9 × 9. (d) LFS [1]. (e) DILF [2]. (f) WSC [3]. (g) Multi-cue [4]. The first five samples are taken from the proposed Lytro Illum dataset, 
+Visual comparison of our best MAC block variant (MAC block-9 × 9) and state-of-the-art methods on three datasets is shown in the following figure. (a) Central viewing/all-focus images. (b) Ground truth maps. 
+(c) MAC block-9 × 9. (d) LFS [1]. (e) DILF [2]. (f) WSC [3]. (g) Multi-cue [4]. The first five samples are taken from the proposed Lytro Illum dataset, 
 the middle three samples are taken from the HFUT-Lytro dataset, and the last two samples are taken from the LFSD dataset.
-<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/result.png" /></div>
-<font size=2> Visual comparison of different LFNet variants and other state-of-the-art methods on three datasets.
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/MAC-light-field-saliency-net/raw/master/result.png" /></div>
+<font size=2> Visual comparison of different MAC block variants and other state-of-the-art methods on three datasets.
 
 
 ## References
@@ -114,7 +114,7 @@ the middle three samples are taken from the HFUT-Lytro dataset, and the last two
 If you find our paper and repo useful, please cite our paper. Thanks!
 
 ```
-@article{Zhang2019lfnet,
+@article{Zhang2019,
     title={Light Field Saliency Detection with Deep Convolutional Networks},
     author={Zhang, Jun and Liu, Yamei and Zhang, Shengping, Poppe, Ronald and Wang, Meng},
     journal={arXiv preprint arXiv: 1906.08331},

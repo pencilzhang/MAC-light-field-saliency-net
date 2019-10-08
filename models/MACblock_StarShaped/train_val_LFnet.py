@@ -154,10 +154,10 @@ def cn_LF(split):
     return n.to_proto()
 
 def make_net():
-    with open('../models/LFnet_StarShaped/train_LF.prototxt', 'w') as f:
+    with open('../models/MACblock_StarShaped/train.prototxt', 'w') as f:
         f.write(str(cn_LF('train')))
 
-    with open('../models/LFnet_StarShaped/val_LF.prototxt', 'w') as f:
+    with open('../models/MACblock_StarShaped/val.prototxt', 'w') as f:
         f.write(str(cn_LF('val')))
 
 if __name__ == '__main__':

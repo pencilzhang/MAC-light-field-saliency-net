@@ -16,12 +16,12 @@ os.getcwd
 caffe.set_device(0)
 caffe.set_mode_gpu()
 
-LFNet_model='LFnet_99'
+MAC_model='MACblock_99'
 k=1
 
-caffemodel='../models/'+LFNet_model+'model/'+str(k)+'train_iter_160000.caffemodel'
+caffemodel='../models/'+MAC_model+'model/'+str(k)+'train_iter_160000.caffemodel'
 
-net_test = caffe.Net('../models/'+LFNet_model+'/test.prototxt',  
+net_test = caffe.Net('../models/'+MAC_model+'/test.prototxt',  
                 caffemodel,  
                 caffe.TEST) 
 test_iter =  128   
