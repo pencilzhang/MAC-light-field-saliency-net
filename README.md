@@ -68,9 +68,9 @@ For example, train1.txt indicates the train data used in the 1st-fold experiment
 * We initialize the backbone model with [DeepLabv2](https://drive.google.com/open?id=1ed4HmhGn50uz21wUavIkZYcYz8OjRg4l) pre-trained on the PASCAL VOC 2012 segmentation benchmark. Then Create a new "pretrain"  folder and place the downloaded pretrained model in this folder.
   
 * There are two ways to train the whole network:
-(1) Run `python train.py` to train the MAC block-9×9 network. If you need to train other models, you can replace 	`LFnet_99` with `LFnet_33` or `LFnet_StarShaped`. k indicates the first fold cross validation, which can be changed into 1-5.
+(1) Run `python train.py` to train the MAC block-9×9 network. If you need to train other models, you can replace 	`MACblock_99` with `MACblock_33` or `MACblock_StarShaped`. k indicates the first fold cross validation, which can be changed into 1-5.
 (2) Open the terminal, switch to the caffe root directory, 
-run: `/LFNet_model/LFnet_99/train_LF_net.sh`. 
+run: `/models/MACblock_99/train_LF_net.sh`. 
 Note that the file path is changed to the path of your system.
 
 
