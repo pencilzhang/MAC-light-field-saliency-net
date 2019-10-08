@@ -4,13 +4,13 @@ We release the code of [Light Field Saliency Detection with Deep Convolutional N
 
 ## Overall network
 
-<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/framework.png" /></div>
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/MAC-light-field-saliency-net/raw/master/framework.png" /></div>
 <font size=2> The proposed network architecture.
 
-## Architectures of three proposed LFNet variants 
+## Architectures of three proposed MAC block variants 
 
-<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/LFNet-light-field-saliency-net/raw/master/LFNet.png" /></div>
-<font size=2> The architectures of LFNet variants.  (a) MAC block-9 × 9. (b) LFNet-3 × 3. (c) LFnet-StarShaped. The selected viewpoints are highlighted in red.
+<div style="text-align:center"><img src ="https://github.com/YaMeiLiu/MAC-light-field-saliency-net/raw/master/MACblocks.png" /></div>
+<font size=2> The architectures of MAC block variants.  (a) MAC block-9 × 9. (b) MAC block-3 × 3. (c) MAC block-StarShaped. The selected viewpoints are highlighted in red.
 
 ## Installation
 
