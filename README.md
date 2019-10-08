@@ -10,7 +10,7 @@ We release the code of [Light Field Saliency Detection with Deep Convolutional N
 ## Architectures of three proposed MAC block variants 
 
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/MAC-light-field-saliency-net/raw/master/MACblocks.png" /></div>
-<font size=2> The architectures of MAC block variants.  (a) MAC block-9 × 9. (b) MAC block-3 × 3. (c) MAC block-StarShaped. The selected viewpoints are highlighted in red.
+<font size=2> The architectures of MAC block.  (a) MAC block-9 × 9. (b) MAC block-3 × 3. (c) MAC block-StarShaped. The selected viewpoints are highlighted in red.
 
 ## Installation
 
