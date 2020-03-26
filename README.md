@@ -29,7 +29,7 @@ Note: matlabroot is the root directory of MATLAB in your system.
 
 ## Data
 
-### Dataset
+### Dataset：Lytro Illum
 
 This project introduces a new light field dataset using a Lytro Illum camera.
 We collect 640 light fields with significant variations in terms of size, textureness, background clutter and illumination, etc.
@@ -39,6 +39,9 @@ Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgK
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/MAC-light-field-saliency-net/raw/master/dataset_construction.png" /></div>
 <font size=2> Flowchart of the dataset construction. (a) Lytro Illum camera. (b) SA image array generation. (c) ML image array generation. (d) The ground-truth map for the central viewing image.
 
+### Other datasets：
+We also provide links to two other datasets for light field saliency detection
+|[LFSD](https://sites.duke.edu/nianyi/publication/saliency-detection-on-light-field/) |[HFUT-Lytro](https://share.weiyun.com/5TaVCx4)|
 
 ### Data pre-processing
 
