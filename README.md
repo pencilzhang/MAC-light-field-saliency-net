@@ -40,8 +40,9 @@ Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgK
 <font size=2> Flowchart of the dataset construction. (a) Lytro Illum camera. (b) SA image array generation. (c) ML image array generation. (d) The ground-truth map for the central viewing image.
 
 ### Other datasets：
-We also provide links to two other datasets for light field saliency detection
-|[LFSD](https://sites.duke.edu/nianyi/publication/saliency-detection-on-light-field/) |[HFUT-Lytro](https://share.weiyun.com/5TaVCx4)|
+We also provide links to two other datasets for light field saliency detection.
+
+|[LFSD](https://sites.duke.edu/nianyi/publication/saliency-detection-on-light-field/) | |[HFUT-Lytro](https://share.weiyun.com/5TaVCx4)|
 
 ### Data pre-processing
 
