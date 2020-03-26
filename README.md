@@ -29,7 +29,7 @@ Note: matlabroot is the root directory of MATLAB in your system.
 
 ## Data
 
-### Dataset
+### Dataset：Lytro Illum
 
 This project introduces a new light field dataset using a Lytro Illum camera.
 We collect 640 light fields with significant variations in terms of size, textureness, background clutter and illumination, etc.
@@ -39,6 +39,10 @@ Please download them [here](https://drive.google.com/drive/folders/1iEuM-CO5JUgK
 <div style="text-align:center"><img src ="https://github.com/YaMeiLiu/MAC-light-field-saliency-net/raw/master/dataset_construction.png" /></div>
 <font size=2> Flowchart of the dataset construction. (a) Lytro Illum camera. (b) SA image array generation. (c) ML image array generation. (d) The ground-truth map for the central viewing image.
 
+### Other datasets：
+We also provide links to two other datasets for light field saliency detection.
+
+|[LFSD](https://sites.duke.edu/nianyi/publication/saliency-detection-on-light-field/) | |[HFUT-Lytro](https://share.weiyun.com/5TaVCx4)|
 
 ### Data pre-processing
 
@@ -76,7 +80,7 @@ Note that the file path is changed to the path of your system.
 
 
 ## Pretrained models
-To get the pretrained models on the Lytro Illum dataset, please download them form [GoogleDrive](https://drive.google.com/open?id=12L8nYlkMsnjUHWJm97gIkDGdTD7GxUDp) or [BaiduPan](https://pan.baidu.com/s/1IqBKSkgjbbesOAMuhTgpCg).
+To get the pretrained models on the Lytro Illum dataset, please download them form [GoogleDrive](https://drive.google.com/open?id=1q1UayWNI5Fu6z2vsTCtG6KpJ8MdP8tzp) or [BaiduPan](https://pan.baidu.com/s/1IqBKSkgjbbesOAMuhTgpCg).
 Then, please put them under the corresponding [models](/models/) paths.
 
 
@@ -89,7 +93,7 @@ Then, please put them under the corresponding [models](/models/) paths.
 
 
 ## Results
-[The computed saliency maps](https://drive.google.com/open?id=1a-UiTu49rbQkJ7RYrjIayOwPaO2RGtfZ) of three proposed models on the Lytro illum dataset are provided in the repo.
+[The computed saliency maps](https://drive.google.com/open?id=1Ek1rqGT3C4nSs7wXxeD9xoYx5XkZjOTq) of three proposed models on the Lytro illum dataset are provided in the repo.
 
 Visual comparison of our best MAC block variant (MAC block-9 × 9) and state-of-the-art methods on three datasets is shown in the following figure. (a) Central viewing/all-focus images. (b) Ground truth maps. 
 (c) MAC block-9 × 9. (d) LFS [1]. (e) DILF [2]. (f) WSC [3]. (g) Multi-cue [4]. The first five samples are taken from the proposed Lytro Illum dataset, 
