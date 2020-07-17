@@ -118,11 +118,13 @@ the middle three samples are taken from the HFUT-Lytro dataset, and the last two
 If you find our paper and repo useful, please cite our paper. Thanks!
 
 ```
-@article{Zhang2019,
+@article{Zhang2020,
     title={Light Field Saliency Detection with Deep Convolutional Networks},
     author={Zhang, Jun and Liu, Yamei and Zhang, Shengping, Poppe, Ronald and Wang, Meng},
-    journal={arXiv preprint arXiv: 1906.08331},
-    year={2019}
+    journal={IEEE Transactions on Image Processing},
+    volume={29},
+    pages={4421-4434}，
+    year={2020}
 }  
 ```
 
